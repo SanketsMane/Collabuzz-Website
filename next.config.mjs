@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      'utfs.io',
-      'img.clerk.com',
-      'subdomain',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'utfs.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'subdomain',
+      },
     ],
   },
   reactStrictMode: false,
