@@ -1,7 +1,7 @@
 import { Container, Wrapper } from "@/components";
 import { Button } from "@/components/ui/button";
 import SectionBadge from "@/components/ui/section-badge";
-import { Sparkles, Users, Shield, TrendingUp } from "lucide-react";
+import { Sparkles, Users, Shield, TrendingUp, Target } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -48,19 +48,19 @@ const AboutPage = () => {
                     <div className="flex flex-col items-center justify-center py-20 h-full">
                         <SectionBadge title="About Us" />
                         
-                        <div className="flex flex-col items-center mt-8 max-w-4xl w-11/12 md:w-full">
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-                                🎯 The Ultimate Digital Platform for Influencer Marketing Campaigns ✨
+                        <div className="flex flex-col items-center mt-6 md:mt-8 max-w-4xl w-11/12 md:w-full px-4 md:px-0">
+                            <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl leading-tight md:!leading-snug font-semibold text-center">
+                                <span className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl">🎯</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">The Ultimate Digital Platform for Influencer Marketing Campaigns</span> <span className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl">✨</span>
                             </h1>
-                            <p className="text-base md:text-lg text-foreground/80 mt-6 text-center max-w-3xl">
+                            <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-3xl px-2 md:px-0">
                                 Collabuzz 🤝 is the premier platform connecting 🧑‍💻 creators and 💼 brands. We foster authentic partnerships 🤝 that empower ✨ influencers to build thriving businesses 🚀 while helping brands achieve their marketing goals 🎯. Join our vibrant community 🎉 and unlock the power of collaborative success! 💪
                             </p>
                             
-                            <div className="flex flex-wrap gap-4 mt-8">
-                                <Button asChild>
+                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
+                                <Button asChild size="lg" className="w-full sm:w-auto min-w-[140px]">
                                     <Link href="/contact">Get Started</Link>
                                 </Button>
-                                <Button variant="outline" asChild>
+                                <Button variant="outline" asChild size="lg" className="w-full sm:w-auto min-w-[140px]">
                                     <Link href="/services">Learn More</Link>
                                 </Button>
                             </div>
@@ -72,11 +72,11 @@ const AboutPage = () => {
             {/* Statistics Section */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
                 <Container>
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-10">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 py-6 md:py-10 px-4 md:px-0">
                         {stats.map((stat, index) => (
                             <div key={index} className="text-center">
-                                <h3 className="text-3xl md:text-4xl font-bold text-primary">{stat.value}</h3>
-                                <p className="text-muted-foreground mt-2">{stat.label}</p>
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">{stat.value}</h3>
+                                <p className="text-xs md:text-sm text-muted-foreground mt-1 md:mt-2">{stat.label}</p>
                             </div>
                         ))}
                     </div>
@@ -91,7 +91,7 @@ const AboutPage = () => {
                 <Container>
                     <div className="max-w-md mx-auto text-start md:text-center mb-12">
                         <SectionBadge title="Why Choose Us" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
                             🚀 Why Choose Collabuzz for Influencer Marketing?
                         </h2>
                         <p className="text-muted-foreground mt-6">

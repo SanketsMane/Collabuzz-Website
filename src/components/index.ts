@@ -3,6 +3,8 @@ import ThemeProvider from "./providers/theme-provider";
 
 import Navbar from "./home/navigation/navbar";
 import Footer from "./home/navigation/footer";
+import BrandsMarquee from "./home/brands-marquee";
+import InfluencersMarquee from "./home/influencers-marquee";
 
 import Icons from "./global/icons";
 import Wrapper from "./global/wrapper";
@@ -16,4 +18,6 @@ export {
     Wrapper,
     Footer,
     Container,
+    BrandsMarquee,
+    InfluencersMarquee,
 }

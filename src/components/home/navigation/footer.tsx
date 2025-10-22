@@ -16,7 +16,7 @@ const Footer = () => {
                         <Icons.logo className="w-7 h-7" />
                     </div>
                     <p className="text-muted-foreground mt-4 text-sm text-start">
-                        Build beautiful, functional websites, without writing code
+                        Connect creators with brands for authentic influencer partnerships
                     </p>
                     <span className="mt-4 text-neutral-200 text-sm flex items-center">
                         Made in India with
@@ -24,116 +24,271 @@ const Footer = () => {
                     </span>
                 </div>
 
-                <div className="grid-cols-2 gap-8 grid mt-16 xl:col-span-2 xl:mt-0">
-                    <div className="md:grid md:grid-cols-2 md:gap-8">
-                        <div className="">
-                            <h3 className="text-base font-medium text-white">
-                                Product
-                            </h3>
-                            <ul className="mt-4 text-sm text-muted-foreground">
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Features
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Pricing
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Testimonials
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Integration
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mt-10 md:mt-0 flex flex-col">
-                            <h3 className="text-base font-medium text-white">
-                                Integrations
-                            </h3>
-                            <ul className="mt-4 text-sm text-muted-foreground">
-                                <li className="">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Facebook
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Instagram
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Twitter
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        LinkedIn
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-16 xl:col-span-2 xl:mt-0">
+                    {/* Product Section */}
+                    <div className="">
+                        <h3 className="text-base font-medium text-white mb-4">
+                            Product
+                        </h3>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                            <li>
+                                <Link href="/influencer-search" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Search
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/influencer-database" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Database
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/influencers-crm" className="hover:text-foreground transition-all duration-300">
+                                    Influencers CRM
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/influencer-analytics" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Analytics
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/influencer-tracking" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Tracking
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/influencer-campaigns" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Campaigns
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/brand-deals" className="hover:text-foreground transition-all duration-300">
+                                    Brand Deals for Influencers
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/analytics-extension" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Analytics Extension
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/pricing-business" className="hover:text-foreground transition-all duration-300">
+                                    Pricing for Business
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/pricing-influencers" className="hover:text-foreground transition-all duration-300">
+                                    Pricing for Influencers
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
-                    <div className="md:grid md:grid-cols-2 md:gap-8">
-                        <div className="">
-                            <h3 className="text-base font-medium text-white">
-                                Resources
-                            </h3>
-                            <ul className="mt-4 text-sm text-muted-foreground">
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Case Studies
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Support
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="mt-10 md:mt-0 flex flex-col">
-                            <h3 className="text-base font-medium text-white">
-                                Company
-                            </h3>
-                            <ul className="mt-4 text-sm text-muted-foreground">
-                                <li className="">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        About Us
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li className="mt-2">
-                                    <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Terms & Conditions
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+
+                    {/* Use Cases Section */}
+                    <div className="">
+                        <h3 className="text-base font-medium text-white mb-4">
+                            Use cases
+                        </h3>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                            <li>
+                                <Link href="/b2b-brands" className="hover:text-foreground transition-all duration-300">
+                                    For B2B Brands
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/b2c-brands" className="hover:text-foreground transition-all duration-300">
+                                    For B2C Brands
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/agencies" className="hover:text-foreground transition-all duration-300">
+                                    For Agencies
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/creators" className="hover:text-foreground transition-all duration-300">
+                                    For Creators
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/small-businesses" className="hover:text-foreground transition-all duration-300">
+                                    For Small Businesses
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/social-listening" className="hover:text-foreground transition-all duration-300">
+                                    Social Listening
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/influencer-marketing" className="hover:text-foreground transition-all duration-300">
+                                    Influencer Marketing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/employee-advocacy" className="hover:text-foreground transition-all duration-300">
+                                    Employee Advocacy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/social-rankings" className="hover:text-foreground transition-all duration-300">
+                                    Social Media Rankings
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/linkedin-analytics" className="hover:text-foreground transition-all duration-300">
+                                    LinkedIn Analytics
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Resources Section */}
+                    <div className="">
+                        <h3 className="text-base font-medium text-white mb-4">
+                            Resources
+                        </h3>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                            <li>
+                                <Link href="/rankings" className="hover:text-foreground transition-all duration-300">
+                                    Rankings
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/blog" className="hover:text-foreground transition-all duration-300">
+                                    Blog
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/about" className="hover:text-foreground transition-all duration-300">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/sponsoring" className="hover:text-foreground transition-all duration-300">
+                                    Sponsoring
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/linkedin-campaigns" className="hover:text-foreground transition-all duration-300">
+                                    Launch LinkedIn Campaigns
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/all-resources" className="hover:text-foreground transition-all duration-300">
+                                    All Resources
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/affiliate" className="hover:text-foreground transition-all duration-300">
+                                    Affiliate Program
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Support Section */}
+                    <div className="">
+                        <h3 className="text-base font-medium text-white mb-4">
+                            Support
+                        </h3>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                            <li>
+                                <Link href="/getting-started" className="hover:text-foreground transition-all duration-300">
+                                    Getting started
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/report-bug" className="hover:text-foreground transition-all duration-300">
+                                    Report a bug
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/legal" className="hover:text-foreground transition-all duration-300">
+                                    Legal
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/terms" className="hover:text-foreground transition-all duration-300">
+                                    Terms & Conditions
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy" className="hover:text-foreground transition-all duration-300">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy-influencers" className="hover:text-foreground transition-all duration-300">
+                                    Privacy Policy for Influencers
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/refund" className="hover:text-foreground transition-all duration-300">
+                                    Refund Policy
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Tools Section */}
+                    <div className="">
+                        <h3 className="text-base font-medium text-white mb-4">
+                            Tools
+                        </h3>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                            <li>
+                                <Link href="/find-instagram-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find Instagram Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-youtube-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find YouTube Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-tiktok-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find TikTok Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-linkedin-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find LinkedIn Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-twitter-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find Twitter Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-b2b-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find B2B Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-local-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find Local Influencer
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/find-micro-influencer" className="hover:text-foreground transition-all duration-300">
+                                    Find Micro Influencer
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
             </div>
 
-            <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full">
-                <p className="text-sm text-muted-foreground mt-8 md:mt-0">
-                    &copy; {new Date().getFullYear()} Astra AI INC. All rights reserved.
+            <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 flex flex-col md:flex-row md:items-center md:justify-between w-full gap-4 md:gap-0">
+                <p className="text-sm text-muted-foreground text-center md:text-left">
+                    &copy; {new Date().getFullYear()} Collabuzz. All rights reserved.
+                </p>
+                <p className="text-sm text-muted-foreground text-center md:text-right">
+                    Empowering Creators & Brands Worldwide
                 </p>
             </div>
 

@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, ChevronRight, UserIcon, Zap, Search, Users, BarChart3, Sparkles, Target, HandHeart, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import BrandsMarquee from "@/components/home/brands-marquee";
+import InfluencersMarquee from "@/components/home/influencers-marquee";
 
 const HomePage = () => {
 
@@ -116,65 +118,69 @@ const HomePage = () => {
                             </span>
                         </button>
 
-                        <div className="flex flex-col items-center mt-8 max-w-4xl w-11/12 md:w-full">
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-                                🌟 Discover Exciting Collabs with Top Brands!
+                        <div className="flex flex-col items-center mt-4 md:mt-8 w-full max-w-4xl px-4 sm:px-6 md:px-8">
+                            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-semibold text-center">
+                                <span className="text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">🌟</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Discover Exciting Collabs with Top Brands!</span>
                             </h1>
-                            <p className="text-base md:text-lg text-foreground/80 mt-6 text-center max-w-3xl">
+                            <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-2xl">
                                 Connect with top brands for easy collaborations! 🤝 We help you find the best campaigns that fit your style in just one click! Whether you&apos;re a brand or creator, unlock the power of authentic partnerships.
                             </p>
-                            <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
-                                <Link href="/about" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
-                                    <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0">
-                                        🚀 {"  "} Start building your influence network now!
+                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
+                                <Button asChild size="lg" className="w-full sm:w-auto min-w-[140px]">
+                                    <Link href="/brand">For Brands</Link>
+                                </Button>
+                                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[140px]">
+                                    <Link href="/influencer">For Influencer</Link>
+                                </Button>
+                            </div>
+                            <div className="hidden md:flex relative items-center justify-center mt-6 w-full">
+                                <Link href="/about" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-4 py-2 gap-4 shadow-3xl shadow-background/40 cursor-pointer select-none">
+                                    <p className="text-foreground text-sm md:text-base font-medium">
+                                        🚀 Start building your influence network now!
                                     </p>
-                                    <Button size="sm" className="rounded-full hidden lg:flex border border-foreground/20">
-                                        Get Started
-                                        <ArrowRight className="w-4 h-4 ml-1" />
-                                    </Button>
                                 </Link>
                             </div>
                         </div>
 
-                        <div className="relative flex items-center justify-center py-10 md:py-20 w-full min-h-[600px]">
+                        <div className="relative flex items-center justify-center py-4 md:py-10 lg:py-20 w-full min-h-[300px] md:min-h-[600px] px-4">
                             <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
-                            <div className="w-full max-w-4xl mx-auto -m-2 rounded-xl p-4 ring-2 ring-primary/20 lg:-m-4 lg:rounded-2xl bg-card/30 backdrop-blur-xl border-2 border-primary/10">
-                                <div className="relative w-full h-[450px] lg:h-[550px] rounded-lg lg:rounded-xl bg-gradient-to-br from-card/50 to-muted/30 shadow-2xl border border-border overflow-hidden">
+                            <div className="w-full max-w-sm md:max-w-4xl mx-auto rounded-lg md:rounded-xl lg:rounded-2xl p-3 md:p-4 ring-1 md:ring-2 ring-primary/20 bg-card/30 backdrop-blur-xl border border-primary/10 md:border-2">
+                                <div className="relative w-full h-[280px] md:h-[450px] lg:h-[550px] rounded-md md:rounded-lg lg:rounded-xl bg-gradient-to-br from-card/50 to-muted/30 shadow-xl md:shadow-2xl border border-border overflow-hidden">
                                     
                                     {/* LARGE VISIBLE CENTER ELEMENT - This should definitely show */}
                                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-50">
-                                        <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-2xl mx-auto mb-4">
-                                            <Sparkles className="w-12 h-12 text-primary-foreground" />
+                                        <div className="w-16 h-16 md:w-24 md:h-24 bg-primary rounded-xl md:rounded-2xl flex items-center justify-center shadow-xl md:shadow-2xl mx-auto mb-2 md:mb-4">
+                                            <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-primary-foreground" />
                                         </div>
-                                        <h2 className="text-xl font-bold text-foreground mb-2">Collabuzz</h2>
-                                        <p className="text-muted-foreground">Influencer Marketing Platform</p>
+                                        <h2 className="text-lg md:text-xl font-bold text-foreground mb-1 md:mb-2">Collabuzz</h2>
+                                        <p className="text-xs md:text-sm text-muted-foreground">Influencer Marketing Platform</p>
                                     </div>
                                     
                                     {/* Dashboard Header - More Visible */}
-                                    <div className="absolute top-6 left-6 right-6 h-14 bg-card backdrop-blur-md rounded-xl border-2 border-primary/20 shadow-lg flex items-center px-4">
-                                        <div className="flex items-center space-x-3">
-                                            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shadow-md">
-                                                <Sparkles className="w-5 h-5 text-primary-foreground" />
+                                    <div className="absolute top-2 md:top-6 left-2 md:left-6 right-2 md:right-6 h-8 md:h-14 bg-card backdrop-blur-md rounded-md md:rounded-xl border border-primary/20 shadow-lg flex items-center px-2 md:px-4">
+                                        <div className="flex items-center space-x-1 md:space-x-3">
+                                            <div className="w-5 h-5 md:w-8 md:h-8 bg-primary rounded-md md:rounded-lg flex items-center justify-center shadow-md">
+                                                <Sparkles className="w-3 h-3 md:w-5 md:h-5 text-primary-foreground" />
                                             </div>
-                                            <span className="font-bold text-foreground text-base">Collabuzz Dashboard</span>
+                                            <span className="font-bold text-foreground text-xs md:text-base">Collabuzz</span>
                                         </div>
-                                        <div className="ml-auto flex items-center space-x-2">
-                                            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-sm"></div>
-                                            <span className="text-sm font-medium text-foreground">LIVE</span>
+                                        <div className="ml-auto flex items-center space-x-1 md:space-x-2">
+                                            <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse shadow-sm"></div>
+                                            <span className="text-xs md:text-sm font-medium text-foreground">LIVE</span>
                                         </div>
                                     </div>
 
-                                    {/* Campaign Cards */}
-                                    <div className="absolute top-24 left-6 w-48 h-32 bg-card backdrop-blur-sm rounded-xl border-2 border-primary/30 shadow-lg p-4">
+                                    {/* Campaign Cards - Hidden on mobile */}
+                                    <div className="hidden md:block absolute top-24 left-6 w-48 h-32 bg-card backdrop-blur-sm rounded-xl border-2 border-primary/30 shadow-lg p-4">
                                         <div className="flex items-center justify-between mb-2">
                                             <h3 className="text-xs font-medium text-foreground">Active Campaigns</h3>
                                             <Target className="w-3 h-3 text-primary" />
                                         </div>
                                         <div className="space-y-1.5">
                                             <div className="flex items-center space-x-2">
-                                                <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-sm"></div>
+                                                <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-violet-500 rounded-sm"></div>
                                                 <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
-                                                    <div className="w-3/4 h-full bg-gradient-to-r from-blue-500 to-cyan-500 animate-pulse"></div>
+                                                    <div className="w-3/4 h-full bg-gradient-to-r from-purple-500 to-violet-500 animate-pulse"></div>
                                                 </div>
                                             </div>
                                             <div className="flex items-center space-x-2">
@@ -271,6 +277,12 @@ const HomePage = () => {
                 </Container>
             </Wrapper>
 
+            {/* Brand Logos Marquee */}
+            <BrandsMarquee />
+
+            {/* Influencers Marquee */}
+            <InfluencersMarquee />
+
             {/* features section */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
                 <Container>
@@ -305,54 +317,54 @@ const HomePage = () => {
                 </Container>
                 {/* Statistics */}
                 <Container>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10">
-                        <div className="text-center">
-                            <h3 className="text-3xl font-bold text-primary">97%</h3>
-                            <p className="text-muted-foreground">Match Score</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-8 md:py-10 px-4">
+                        <div className="text-center p-4 rounded-lg bg-card/20">
+                            <h3 className="text-xl md:text-3xl font-bold text-primary">97%</h3>
+                            <p className="text-xs md:text-sm text-muted-foreground mt-1">Match Score</p>
                         </div>
-                        <div className="text-center">
-                            <h3 className="text-3xl font-bold text-primary">+340%</h3>
-                            <p className="text-muted-foreground">ROI Boost</p>
+                        <div className="text-center p-4 rounded-lg bg-card/20">
+                            <h3 className="text-xl md:text-3xl font-bold text-primary">+340%</h3>
+                            <p className="text-xs md:text-sm text-muted-foreground mt-1">ROI Boost</p>
                         </div>
-                        <div className="text-center">
-                            <h3 className="text-3xl font-bold text-primary">80%</h3>
-                            <p className="text-muted-foreground">Time Saved</p>
+                        <div className="text-center p-4 rounded-lg bg-card/20">
+                            <h3 className="text-xl md:text-3xl font-bold text-primary">80%</h3>
+                            <p className="text-xs md:text-sm text-muted-foreground mt-1">Time Saved</p>
                         </div>
-                        <div className="text-center">
-                            <h3 className="text-3xl font-bold text-primary">200+</h3>
-                            <p className="text-muted-foreground">Influencers</p>
+                        <div className="text-center p-4 rounded-lg bg-card/20">
+                            <h3 className="text-xl md:text-3xl font-bold text-primary">200+</h3>
+                            <p className="text-xs md:text-sm text-muted-foreground mt-1">Influencers</p>
                         </div>
                     </div>
                 </Container>
             </Wrapper>
 
             {/* features */}
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            <Wrapper className="flex flex-col items-center justify-center py-8 md:py-12 relative">
                 <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
-                <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
+                <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-purple-600 rounded-full blur-[10rem] -z-10"></div>
                 <Container>
-                    <div className="max-w-md mx-auto text-start md:text-center">
+                    <div className="max-w-md md:max-w-2xl mx-auto text-center px-4 md:px-0">
                         <SectionBadge title="Features" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6">
                             Discover our powerful features
                         </h2>
-                        <p className="text-muted-foreground mt-6">
-                            Astra offers a range of features to help you build a stunning website in no time
+                        <p className="text-sm md:text-base text-muted-foreground mt-4 md:mt-6">
+                            Collabuzz offers a range of features to help you build successful influencer partnerships in no time
                         </p>
                     </div>
                 </Container>
                 <Container>
-                    <div className="flex items-center justify-center mx-auto mt-8">
-                        <Icons.feature className="w-auto h-80" />
+                    <div className="flex items-center justify-center mx-auto mt-6 md:mt-8 px-4">
+                        <Icons.feature className="w-auto h-48 md:h-80" />
                     </div>
                 </Container>
                 <Container>
-                    <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
+                    <div className="flex flex-col items-center justify-center py-8 md:py-20 w-full px-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 md:gap-8">
                             {collabuzzFeatures.map((feature) => (
-                                <div key={feature.title} className="flex flex-col items-start lg:items-start px-0 md:px-0">
-                                    <div className="flex items-center justify-center">
-                                        <feature.icon className="w-8 h-8" />
+                                <div key={feature.title} className="flex flex-col items-start p-4 md:p-6 rounded-lg bg-card/20 border border-border/20">
+                                    <div className="flex items-center justify-center mb-4">
+                                        <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                                     </div>
                                     <h3 className="text-lg font-medium mt-4">
                                         {feature.title}
@@ -369,7 +381,7 @@ const HomePage = () => {
 
             {/* pricing */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-                <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
+                <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-purple-500 rounded-full blur-[10rem] -z-10"></div>
                 <Container>
                     <div className="max-w-4xl mx-auto text-center">
                         <SectionBadge title="Get Started" />
@@ -379,30 +391,30 @@ const HomePage = () => {
                         <p className="text-muted-foreground mt-6 text-lg">
                             Join thousands of brands and influencers who trust Collabuzz for their marketing success
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                            <Link href="/sign-up" className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mt-6 md:mt-8 px-4 md:px-0">
+                            <Link href="/brand" className="px-6 md:px-8 py-2.5 md:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-sm md:text-base text-center">
                                 Start as Brand
                             </Link>
-                            <Link href="/sign-up" className="px-8 py-3 border border-border rounded-lg hover:bg-muted transition-colors font-medium">
+                            <Link href="/influencer" className="px-6 md:px-8 py-2.5 md:py-3 border border-border rounded-lg hover:bg-muted transition-colors font-medium text-sm md:text-base text-center">
                                 Join as Influencer
                             </Link>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-2xl mx-auto">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8 md:mt-16 max-w-2xl mx-auto px-4 md:px-0">
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-primary">97%</div>
-                                <div className="text-sm text-muted-foreground">Match Score</div>
+                                <div className="text-xl md:text-2xl font-bold text-primary">97%</div>
+                                <div className="text-xs md:text-sm text-muted-foreground">Match Score</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-primary">340%</div>
-                                <div className="text-sm text-muted-foreground">ROI Increase</div>
+                                <div className="text-xl md:text-2xl font-bold text-primary">340%</div>
+                                <div className="text-xs md:text-sm text-muted-foreground">ROI Increase</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-primary">200+</div>
-                                <div className="text-sm text-muted-foreground">Influencers</div>
+                                <div className="text-xl md:text-2xl font-bold text-primary">200+</div>
+                                <div className="text-xs md:text-sm text-muted-foreground">Influencers</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-2xl font-bold text-primary">100%</div>
-                                <div className="text-sm text-muted-foreground">Verified</div>
+                                <div className="text-xl md:text-2xl font-bold text-primary">100%</div>
+                                <div className="text-xs md:text-sm text-muted-foreground">Verified</div>
                             </div>
                         </div>
                     </div>
@@ -411,27 +423,27 @@ const HomePage = () => {
 
             {/* testimonials */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-                <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-indigo-500 rounded-full blur-[10rem] -z-10"></div>
+                <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-purple-500 rounded-full blur-[10rem] -z-10"></div>
                 <Container>
-                    <div className="max-w-md mx-auto text-start md:text-center">
+                    <div className="max-w-md md:max-w-2xl mx-auto text-center px-4">
                         <SectionBadge title="Our Customers" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6">
                             What people are saying
                         </h2>
-                        <p className="text-muted-foreground mt-6">
-                            See how Astra empowers businesses of all sizes. Here&apos;s what real people are saying on Twitter
+                        <p className="text-sm md:text-base text-muted-foreground mt-4 md:mt-6">
+                            See how Collabuzz empowers creators and brands. Here&apos;s what real people are saying
                         </p>
                     </div>
                 </Container>
                 <Container>
-                    <div className="py-10 md:py-20 w-full">
-                        <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-10">
+                    <div className="py-6 md:py-20 w-full">
+                        <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-6 md:py-10">
                             <Marquee pauseOnHover className="[--duration:20s] select-none">
                                 {firstRow.map((review) => (
                                     <figure
                                         key={review.name}
                                         className={cn(
-                                            "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+                                            "relative w-56 md:w-64 cursor-pointer overflow-hidden rounded-xl border p-3 md:p-4",
                                             "border-zinc-50/[.1] bg-background over:bg-zinc-50/[.15]",
                                         )}
                                     >

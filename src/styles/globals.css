@@ -3,13 +3,82 @@
 @tailwind utilities;
 
 @layer base {
+  /* Mobile-first responsive utilities */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .heading-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  .section-padding {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+  
+  .mobile-menu-slide {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Marquee Animations */
+  @keyframes scroll-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll-ltr {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-scroll-rtl {
+    animation: scroll-rtl 30s linear infinite;
+  }
+  
+  .animate-scroll-ltr {
+    animation: scroll-ltr 40s linear infinite;
+  }
+  
+  .animate-scroll-rtl:hover,
+  .animate-scroll-ltr:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Mobile touch improvements */
+  @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
   :root {
     /* Name: custom color palette
        Author: Ilias Ism
        URL: https://gradient.page */
 
     /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: linear-gradient(to top left, #007adf, #00ecbc);
+    --gradient: linear-gradient(to top left, #8b5cf6, #a855f7);
 
     --background: 220 65% 3.52%;
     --foreground: 220 10% 97.2%;
@@ -26,19 +95,19 @@
     --border: 220 50% 13.2%;
     --input: 220 50% 13.2%;
 
-    --primary: 220 100% 44%;
+    --primary: 262 83% 58%;
     --primary-foreground: 220 10% 97.2%;
 
-    --secondary: 220 50% 13.2%;
+    --secondary: 262 40% 20%;
     --secondary-foreground: 220 10% 97.2%;
 
-    --accent: 220 50% 13.2%;
+    --accent: 270 60% 65%;
     --accent-foreground: 220 10% 97.2%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 220 10% 97.2%;
 
-    --ring: 220 100% 44%;
+    --ring: 262 83% 58%;
 
     --radius: 0.5rem;
   }
@@ -47,7 +116,7 @@
     --background: 216 100% 98.04%;
     --foreground: 213.6 100% 4.9%;
 
-    --primary: 214.12 100% 50%;
+    --primary: 262 100% 70%;
     --primary-foreground: 0 0% 100%;
 
     --card: 216 100% 98.04%;
@@ -56,13 +125,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 213.6 100% 4.9%;
 
-    --secondary: 214.74 100% 92.55%;
+    --secondary: 262 100% 92%;
     --secondary-foreground: 216 100% 0.98%;
 
     --muted: 213.6 100% 95.1%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 213.6 100% 95.1%;
+    --accent: 270 100% 95%;
     --accent-foreground: 214.12 100% 50%;
 
     --destructive: 0 84.2% 60.2%;
