@@ -32,52 +32,52 @@ const Footer = () => {
                         </h3>
                         <ul className="text-sm text-muted-foreground space-y-2">
                             <li>
-                                <Link href="/influencer-search" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Search
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/influencer-database" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Database
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/influencers-crm" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencers CRM
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/influencer-analytics" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Analytics
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/influencer-tracking" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Tracking
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/influencer-campaigns" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Campaigns
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/brand-deals" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Brand Deals for Influencers
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/analytics-extension" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Analytics Extension
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/pricing-business" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Pricing for Business
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/pricing-influencers" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Pricing for Influencers
                                 </Link>
                             </li>
@@ -91,52 +91,52 @@ const Footer = () => {
                         </h3>
                         <ul className="text-sm text-muted-foreground space-y-2">
                             <li>
-                                <Link href="/b2b-brands" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     For B2B Brands
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/b2c-brands" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     For B2C Brands
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/agencies" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     For Agencies
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/creators" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     For Creators
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/small-businesses" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     For Small Businesses
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/social-listening" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Social Listening
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/influencer-marketing" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Influencer Marketing
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/employee-advocacy" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Employee Advocacy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/social-rankings" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     Social Media Rankings
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/linkedin-analytics" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/brand" className="hover:text-foreground transition-all duration-300">
                                     LinkedIn Analytics
                                 </Link>
                             </li>
@@ -224,8 +224,13 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/refund" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/refunds" className="hover:text-foreground transition-all duration-300">
                                     Refund Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/shipping" className="hover:text-foreground transition-all duration-300">
+                                    Shipping Policy
                                 </Link>
                             </li>
                         </ul>
@@ -238,42 +243,42 @@ const Footer = () => {
                         </h3>
                         <ul className="text-sm text-muted-foreground space-y-2">
                             <li>
-                                <Link href="/find-instagram-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find Instagram Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-youtube-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find YouTube Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-tiktok-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find TikTok Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-linkedin-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find LinkedIn Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-twitter-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find Twitter Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-b2b-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find B2B Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-local-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find Local Influencer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/find-micro-influencer" className="hover:text-foreground transition-all duration-300">
+                                <Link href="/influencer" className="hover:text-foreground transition-all duration-300">
                                     Find Micro Influencer
                                 </Link>
                             </li>

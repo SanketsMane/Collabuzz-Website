@@ -1,17 +1,17 @@
 <h1 align="start">
-  Astra - AI Powered Website Builder
+  Collabuzz - Influencer Marketing Platform
 </h1>
 
-<img width="1280" alt="Astra Thumbnail" src="https://github.com/user-attachments/assets/8d11fc9c-8220-4d36-a0e3-271b73a7f23d">
+<img width="1280" alt="Collabuzz Platform" src="https://github.com/user-attachments/assets/8d11fc9c-8220-4d36-a0e3-271b73a7f23d">
 
 
 ## Introduction
 
-Astra is a modern, fully responsive website built with a powerful tech stack. This project showcases the use of Next.js for server-side rendering, TailwindCSS for sleek styling, shadcn UI for elegant components, and Clerk for secure authentication.
+Collabuzz is a modern, fully responsive influencer marketing platform built with a powerful tech stack. This project showcases the use of Next.js for server-side rendering, TailwindCSS for sleek styling, shadcn UI for elegant components, and features authentic Indian influencer integration.
 
 ## Watch Tutorial on YouTube
 
-Check out the preivew to see how this website was built: [Astra Website Tutorial](https://youtu.be/zSz67kLPbZY?si=mVBTTh23pv_roRHQ)
+Check out the preview to see how this platform was built: [Collabuzz Platform Tutorial](https://youtu.be/zSz67kLPbZY?si=mVBTTh23pv_roRHQ)
 
 ## Tech Stack
 
@@ -32,8 +32,8 @@ Make sure that you have installed
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/Shreyas-29/astra-website.git
-   cd astra-website
+   git clone https://github.com/Shreyas-29/collabuzz-platform.git
+   cd collabuzz-platform
    ```
 2. Install dependencies:
    ```bash

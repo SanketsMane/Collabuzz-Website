@@ -83,25 +83,25 @@ const InfluencerPage = () => {
 
     const testimonials = [
         {
-            name: "Sarah Chen",
-            handle: "@sarahlifestyle",
+            name: "Priya Sharma",
+            handle: "@priyalifestyle",
             followers: "85K",
-            quote: "Collabuzz helped me turn my passion into a sustainable business. I've earned over $15K in just 3 months!",
-            avatar: "SC"
+            quote: "Collabuzz helped me turn my passion into a sustainable business. I've earned over ₹12L in just 3 months!",
+            avatar: "PS"
         },
         {
-            name: "Marcus Johnson",
-            handle: "@marcusfitness",
+            name: "Arjun Singh",
+            handle: "@arjunfitness",
             followers: "120K", 
             quote: "The brand partnerships are authentic and align perfectly with my content. My audience loves the collaborations!",
-            avatar: "MJ"
+            avatar: "AS"
         },
         {
-            name: "Emma Rodriguez",
-            handle: "@emmafoodie",
+            name: "Kavya Patel",
+            handle: "@kavyafoodie",
             followers: "45K",
             quote: "Professional support and fair payments. Collabuzz treats creators with respect and transparency.",
-            avatar: "ER"
+            avatar: "KP"
         }
     ];
 
@@ -120,11 +120,11 @@ const InfluencerPage = () => {
                                 Connect with brands that value your creativity. Build authentic partnerships, grow your audience, and create a sustainable income stream from your passion.
                             </p>
                             
-                            <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8 w-full max-w-md mx-auto md:max-w-none">
-                                <Button asChild size="lg" className="w-full sm:w-auto">
+                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
+                                <Button asChild size="lg" className="w-full sm:w-auto min-w-[140px]">
                                     <Link href="/contact">Join as Creator</Link>
                                 </Button>
-                                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[140px]">
                                     <Link href="/about">Learn More</Link>
                                 </Button>
                             </div>

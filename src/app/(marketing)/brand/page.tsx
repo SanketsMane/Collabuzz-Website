@@ -57,46 +57,57 @@ const BrandPage = () => {
     const pricingTiers = [
         {
             name: "Starter",
-            price: "$99",
-            period: "/month",
+            price: "Free",
+            period: "",
             description: "Perfect for small businesses starting with influencer marketing",
             features: [
-                "Up to 5 campaigns per month",
-                "Access to micro-influencers (1K-100K)",
-                "Basic analytics dashboard",
-                "Email support",
-                "Campaign templates"
+                "1 Campaign Creation",
+                "5 Influencer Shortlists",
+                "Basic Analytics Dashboard",
+                "Email support"
+            ],
+            highlighted: false
+        },
+        {
+            name: "Growth",
+            price: "₹1999",
+            period: "/ 30 days",
+            description: "Ideal for growing brands with regular campaigns",
+            features: [
+                "5 Campaign Creations",
+                "Access to 500 Influencers",
+                "AI Brief Creation",
+                "Campaign Insights Dashboard"
             ],
             highlighted: false
         },
         {
             name: "Professional", 
-            price: "$299",
-            period: "/month",
-            description: "Ideal for growing brands with regular campaigns",
+            price: "₹4999",
+            period: "/ 90 days",
+            description: "Most popular plan for established brands",
             features: [
-                "Up to 20 campaigns per month",
-                "Access to all influencer tiers",
+                "Up to 15 campaigns per month",
+                "Shortlist 150 Influencers",
+                "AI Campaign Assistance",
+                "Real-Time Chat Access",
                 "Advanced analytics & reporting",
-                "Priority support",
-                "Custom campaign builder",
-                "A/B testing tools",
-                "White-label reports"
+                "Priority support"
             ],
             highlighted: true
         },
         {
             name: "Enterprise",
-            price: "Custom",
-            period: "pricing",
-            description: "For large brands with complex requirements",
+            price: "₹9999",
+            period: "/ 180 days",
+            description: "Current Plan - For large brands with complex requirements",
             features: [
-                "Unlimited campaigns",
+                "Unlimited Campaigns*",
+                "Upto 2000 Shortlists",
                 "Dedicated account manager",
-                "Custom integrations",
-                "Advanced fraud detection",
-                "API access",
-                "Custom analytics dashboard",
+                "AI Campaign Creation & Analytics",
+                "White-label reports",
+                "Chat Access",
                 "24/7 priority support"
             ],
             highlighted: false
@@ -118,11 +129,11 @@ const BrandPage = () => {
                                 Connect with verified influencers who align with your brand values. Drive authentic engagement, increase conversions, and build lasting customer relationships through strategic influencer collaborations.
                             </p>
                             
-                            <div className="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8 w-full max-w-md mx-auto md:max-w-none">
-                                <Button asChild size="lg" className="w-full sm:w-auto">
+                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
+                                <Button asChild size="lg" className="w-full sm:w-auto min-w-[160px]">
                                     <Link href="/contact">Start Your Campaign</Link>
                                 </Button>
-                                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[160px]">
                                     <Link href="/services">View Pricing</Link>
                                 </Button>
                             </div>
@@ -225,9 +236,9 @@ const BrandPage = () => {
                             Flexible pricing that grows with your brand. No hidden fees, cancel anytime.
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                         {pricingTiers.map((tier) => (
-                            <div key={tier.name} className={`relative rounded-2xl p-8 border ${tier.highlighted ? 'border-primary bg-primary/5' : 'border-border bg-card/20'}`}>
+                            <div key={tier.name} className={`relative rounded-2xl p-4 md:p-6 border ${tier.highlighted ? 'border-primary bg-primary/5' : 'border-border bg-card/20'}`}>
                                 {tier.highlighted && (
                                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                                         <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
@@ -235,15 +246,15 @@ const BrandPage = () => {
                                         </span>
                                     </div>
                                 )}
-                                <div className="text-center mb-8">
-                                    <h3 className="text-xl font-semibold mb-2">{tier.name}</h3>
-                                    <div className="mb-4">
-                                        <span className="text-3xl font-bold">{tier.price}</span>
-                                        <span className="text-muted-foreground">{tier.period}</span>
+                                <div className="text-center mb-6">
+                                    <h3 className="text-lg md:text-xl font-semibold mb-2">{tier.name}</h3>
+                                    <div className="mb-3">
+                                        <span className="text-2xl md:text-3xl font-bold">{tier.price}</span>
+                                        <span className="text-muted-foreground text-sm">{tier.period}</span>
                                     </div>
-                                    <p className="text-sm text-muted-foreground">{tier.description}</p>
+                                    <p className="text-xs md:text-sm text-muted-foreground">{tier.description}</p>
                                 </div>
-                                <ul className="space-y-3 mb-8">
+                                <ul className="space-y-2 mb-6">
                                     {tier.features.map((feature, index) => (
                                         <li key={index} className="flex items-start gap-3">
                                             <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />

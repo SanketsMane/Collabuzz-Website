@@ -6,101 +6,101 @@ import Image from "next/image";
 const influencers = [
   {
     id: 1,
-    name: "Arin Goldsmith",
+    name: "Aarav Sharma",
     username: "in",
-    country: "🇺🇸",
-    countryName: "United States",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b970?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/male-3.png",
     badge: "TOP 5%",
     category: "Gaming & Streaming",
     socialIcons: ["linkedin", "twitter", "instagram", "tiktok"]
   },
   {
     id: 2,
-    name: "Levelsio",
+    name: "Priya Patel",
     username: "",
-    country: "🇳🇱",
-    countryName: "Netherlands",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/female-1.png",
     badge: "TOP 1%",
     category: "Business & Startups",
     socialIcons: ["tiktok", "instagram", "twitter"]
   },
   {
     id: 3,
-    name: "Heba Rashed",
+    name: "Kavya Singh",
     username: "",
-    country: "🇪🇬",
-    countryName: "Egypt",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/female-2.png",
     badge: "TOP 3%",
-    category: "Inclusion & Social Impact",
+    category: "Lifestyle & Fashion",
     socialIcons: ["linkedin", "instagram", "twitter"]
   },
   {
     id: 4,
-    name: "Codie Sanchez",
+    name: "Rohan Gupta",
     username: "",
-    country: "🇺🇸",
-    countryName: "United States",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/male-4.png",
     badge: "TOP 8%",
     category: "Business & Startups",
     socialIcons: ["linkedin", "instagram", "youtube", "tiktok"]
   },
   {
     id: 5,
-    name: "Temi B",
+    name: "Ananya Iyer",
     username: "",
-    country: "🇳🇬",
-    countryName: "Nigeria",
-    avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
+    country: "🇮🇳",
+    countryName: "India",
+    avatar: "/images/influencers/female-6.png",
     badge: "TOP 2%",
-    category: "Career",
+    category: "Career & Education",
     socialIcons: ["instagram", "linkedin"]
   },
   {
     id: 6,
-    name: "Maxim Poulsen",
+    name: "Arjun Reddy",
     username: "",
-    country: "🇫🇷",
-    countryName: "France",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/male-5.png",
     badge: "TOP 8%",
     category: "Marketing & Sales",
     socialIcons: ["linkedin"]
   },
   {
     id: 7,
-    name: "Shadé Zahrai",
+    name: "Sneha Kapoor",
     username: "in 💌",
-    country: "🇦🇺",
-    countryName: "Australia",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/female-4.png",
     badge: "TOP 1%",
-    category: "Careers & Office",
+    category: "Health & Fitness",
     socialIcons: ["linkedin", "instagram", "tiktok", "youtube", "twitter"]
   },
   {
     id: 8,
-    name: "Lior Sinclair",
+    name: "Vikram Joshi",
     username: "",
-    country: "🇺🇸",
-    countryName: "United States",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/male-6.png",
     badge: "TOP 4%",
     category: "IT & Tech",
     socialIcons: ["twitter", "linkedin"]
   },
   {
     id: 9,
-    name: "Milan Jovanovic",
+    name: "Ishita Mehta",
     username: "",
-    country: "🇷🇸",
-    countryName: "Serbia",
-    avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face",
+    country: "��",
+    countryName: "India",
+    avatar: "/images/influencers/female-5.png",
     badge: "TOP 5%",
-    category: "IT & Tech",
+    category: "Food & Travel",
     socialIcons: ["linkedin", "youtube", "twitter"]
   }
 ];
@@ -109,7 +109,7 @@ const SocialIcon = ({ platform }: { platform: string }) => {
   switch (platform) {
     case "linkedin":
       return (
-        <div className="w-5 h-5 bg-blue-600 rounded-sm flex items-center justify-center">
+        <div className="w-5 h-5 bg-purple-600 rounded-sm flex items-center justify-center">
           <LinkedinIcon className="w-3 h-3 text-white" />
         </div>
       );
@@ -154,8 +154,8 @@ export default function InfluencersMarquee() {
               className="flex-shrink-0 group cursor-pointer"
             >
               <div className="bg-gray-900/50 rounded-2xl p-6 w-96 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl relative overflow-hidden border border-gray-800/30">
-                {/* Blue gradient circle background like in screenshot */}
-                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-80"></div>
+                {/* Purple gradient circle background like in screenshot */}
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full opacity-80"></div>
                 
                 {/* Content matching the screenshot layout */}
                 <div className="relative z-10">
@@ -179,9 +179,9 @@ export default function InfluencersMarquee() {
 
                   {/* Bottom section with category and badge */}
                   <div className="flex items-center justify-between">
-                    {/* Category with blue icon */}
+                    {/* Category with purple icon */}
                     <div className="flex items-center space-x-2">
-                      <div className="w-4 h-4 bg-blue-500 rounded-sm flex items-center justify-center">
+                      <div className="w-4 h-4 bg-purple-500 rounded-sm flex items-center justify-center">
                         <span className="text-white text-xs">📊</span>
                       </div>
                       <span className="text-white text-sm font-medium">{influencer.category}</span>
@@ -194,8 +194,8 @@ export default function InfluencersMarquee() {
                   </div>
                 </div>
 
-                {/* Profile Image - Top Right with blue border */}
-                <div className="absolute -top-2 -right-2 w-24 h-24 rounded-full overflow-hidden border-4 border-blue-500 z-20">
+                {/* Profile Image - Top Right with purple border */}
+                <div className="absolute -top-2 -right-2 w-24 h-24 rounded-full overflow-hidden border-4 border-purple-500 z-20">
                   <img 
                     src={influencer.avatar} 
                     alt={influencer.name}
@@ -213,8 +213,8 @@ export default function InfluencersMarquee() {
               className="flex-shrink-0 group cursor-pointer"
             >
               <div className="bg-gray-900/50 rounded-2xl p-6 w-96 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl relative overflow-hidden border border-gray-800/30">
-                {/* Blue gradient circle background */}
-                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-80"></div>
+                {/* Purple gradient circle background */}
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full opacity-80"></div>
                 
                 {/* Content */}
                 <div className="relative z-10">
@@ -239,7 +239,7 @@ export default function InfluencersMarquee() {
                   {/* Category and Badge */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <div className="w-4 h-4 bg-blue-500 rounded-sm flex items-center justify-center">
+                      <div className="w-4 h-4 bg-purple-500 rounded-sm flex items-center justify-center">
                         <span className="text-white text-xs">📊</span>
                       </div>
                       <span className="text-white text-sm font-medium">{influencer.category}</span>
@@ -253,7 +253,7 @@ export default function InfluencersMarquee() {
                 </div>
 
                 {/* Profile Image */}
-                <div className="absolute -top-2 -right-2 w-24 h-24 rounded-full overflow-hidden border-4 border-blue-500 z-20">
+                <div className="absolute -top-2 -right-2 w-24 h-24 rounded-full overflow-hidden border-4 border-purple-500 z-20">
                   <img 
                     src={influencer.avatar} 
                     alt={influencer.name}
