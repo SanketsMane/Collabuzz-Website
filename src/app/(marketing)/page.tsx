@@ -459,8 +459,10 @@ const HomePage = () => {
                                 Join as Influencer
                             </Link>
                         </div>
-                        <div className="text-xs text-muted-foreground mt-4 text-center">
-                            v2.0 - Updated {new Date().toLocaleDateString()}
+                        <div className="mt-6 text-center">
+                            <div className="inline-block px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold animate-pulse">
+                                🚀 LIVE v2.0 - {new Date().toLocaleString()} 🚀
+                            </div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8 md:mt-16 max-w-2xl mx-auto px-4 md:px-0">
                             <div className="text-center">

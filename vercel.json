@@ -1,16 +1,20 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "./deploy.sh",
+  "installCommand": "npm ci --silent --no-fund --no-audit --legacy-peer-deps",
   "framework": "nextjs",
   "nodeVersion": "18.x",
   "env": {
     "NEXT_TELEMETRY_DISABLED": "1",
     "NPM_CONFIG_FUND": "false",
-    "NPM_CONFIG_AUDIT": "false"
+    "NPM_CONFIG_AUDIT": "false",
+    "NPM_CONFIG_PROGRESS": "false",
+    "NPM_CONFIG_LOGLEVEL": "error",
+    "CI": "true"
   },
   "build": {
     "env": {
-      "NEXT_TELEMETRY_DISABLED": "1"
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "NODE_ENV": "production"
     }
   },
   "headers": [
@@ -32,6 +36,10 @@
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
+        },
+        {
+          "key": "X-Deployment-Time",
+          "value": "<<timestamp>>"
         }
       ]
     },
