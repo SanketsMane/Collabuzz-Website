@@ -2,11 +2,19 @@ import { Metadata } from "next";
 
 export const SITE_CONFIG: Metadata = {
     title: {
-        default: "Collabuzz - Influencer Marketing Platform | Collabs from Top Brands & Find Top Influencers",
+        default: "Collabuzz - AI-Powered Influencer Marketing Platform | Created by Sanket Mane",
         template: `%s | Collabuzz`
     },
-    description: "Collabuzz is your premier AI-enabled platform for influencer marketing, dedicated to connecting brands with the ideal influencers to create impactful and engaging marketing campaigns. Our comprehensive tools and analytics empower brands to identify, collaborate, and manage influencer partnerships effectively, ensuring maximum reach and engagement. Whether you're a small business or a large enterprise, Collabuzz simplifies the influencer selection process, enabling you to amplify your brand message and achieve your marketing goals with precision and creativity.",
-    keywords: "influencer marketing, brand partnerships, social media marketing, content creators, influencer campaigns, digital marketing, social media influencers, brand collaborations, marketing strategy, social media strategy, top influencer marketing, influencer outreach, brand collaborations, influencer networks, campaign management, social media advertising, influencer discovery, user-generated content, UGC marketing, UGC campaigns, customer engagement, collabs from top brands, find top influencers",
+    description: "Collabuzz is a cutting-edge AI-powered influencer marketing platform created by Sanket Mane. Connect brands with ideal influencers through intelligent matchmaking, real-time analytics, and automated campaign workflows. Experience the future of influencer marketing with beautiful gradient animations and seamless user experience.",
+    keywords: "Sanket Mane, Collabuzz, influencer marketing, AI-powered platform, brand partnerships, social media marketing, content creators, influencer campaigns, digital marketing, gradient animations, Next.js, TypeScript, React, modern web development, SanketsMane GitHub",
+    authors: [
+        {
+            name: "Sanket Mane",
+            url: "https://github.com/SanketsMane"
+        }
+    ],
+    creator: "Sanket Mane",
+    publisher: "Sanket Mane",
     icons: {
         icon: [
             {
@@ -16,24 +24,36 @@ export const SITE_CONFIG: Metadata = {
         ]
     },
     openGraph: {
-        title: "Collabuzz - Influencer Marketing Platform",
-        description: "Collabuzz is your premier AI-enabled platform for influencer marketing, dedicated to connecting brands with the ideal influencers to create impactful and engaging marketing campaigns.",
+        title: "Collabuzz - AI-Powered Influencer Marketing Platform by Sanket Mane",
+        description: "Revolutionary AI-powered influencer marketing platform created by Sanket Mane. Features intelligent matchmaking, real-time analytics, and beautiful gradient animations built with Next.js.",
+        url: "https://github.com/SanketsMane/Collabuzz-Website",
+        siteName: "Collabuzz by Sanket Mane",
         images: [
             {
                 url: "/collabuzz/collabuzz.com/hero8.png",
             }
-        ]
+        ],
+        locale: "en_US",
+        type: "website"
     },
     twitter: {
         card: "summary_large_image",
-        creator: "@collabuzz",
-        title: "Collabuzz - Influencer Marketing Platform",
-        description: "Connect brands with ideal influencers for impactful marketing campaigns. AI-enabled platform for maximum reach and engagement.",
+        creator: "@SanketsMane",
+        title: "Collabuzz - AI-Powered Platform by Sanket Mane",
+        description: "Revolutionary influencer marketing platform with AI matchmaking, gradient animations, and modern UI. Created by Sanket Mane using Next.js & TypeScript.",
         images: [
             {
                 url: "/collabuzz/collabuzz.com/hero8.png",
             }
         ]
     },
-    metadataBase: new URL("https://collabuzz.com"),
+    metadataBase: new URL("https://collabuzz-website.vercel.app"),
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+        }
+    }
 };

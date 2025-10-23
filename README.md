@@ -1,69 +1,137 @@
-<h1 align="start">
-  Collabuzz - Influencer Marketing Platform
-</h1>
+# 🚀 Collabuzz - AI-Powered Influencer Marketing Platform
 
-<img width="1280" alt="Collabuzz Platform" src="https://github.com/user-attachments/assets/8d11fc9c-8220-4d36-a0e3-271b73a7f23d">
+<div align="center">
 
+![Collabuzz Platform](https://github.com/user-attachments/assets/8d11fc9c-8220-4d36-a0e3-271b73a7f23d)
 
-## Introduction
+**Created & Owned by [Sanket Mane](https://github.com/SanketsMane)**
 
-Collabuzz is a modern, fully responsive influencer marketing platform built with a powerful tech stack. This project showcases the use of Next.js for server-side rendering, TailwindCSS for sleek styling, shadcn UI for elegant components, and features authentic Indian influencer integration.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2.3-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC)](https://tailwindcss.com/)
 
-## Watch Tutorial on YouTube
+</div>
 
-Check out the preview to see how this platform was built: [Collabuzz Platform Tutorial](https://youtu.be/zSz67kLPbZY?si=mVBTTh23pv_roRHQ)
+## 🎯 About This Project
 
-## Tech Stack
+Collabuzz is a cutting-edge, fully responsive influencer marketing platform that I, **Sanket Mane**, have built from the ground up. This platform represents my vision of connecting brands with influencers through AI-powered matchmaking and seamless collaboration tools.
 
-- **Next.js**: For building the React-based website.
-- **TailwindCSS**: For styling with utility-first CSS.
-- **Shadcn UI**: For UI components.
-- **Magic UI**: For UI components.
-- **Clerk**: For user authentication.
+### 🌟 Key Features
 
-## Quick Start
+- **AI-Powered Matchmaking**: Smart algorithms to connect brands with perfect influencers
+- **Real-Time Analytics**: Comprehensive dashboard with performance insights
+- **Automated Campaign Workflow**: Streamlined process from discovery to payment
+- **Gradient Button Animations**: Beautiful UI with engaging visual effects
+- **Responsive Design**: Works perfectly on all devices
+- **Modern Tech Stack**: Built with the latest technologies
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14.2.3, React 18, TypeScript
+- **Styling**: TailwindCSS, Shadcn UI, Magic UI, Framer Motion
+- **Authentication**: Clerk (configured for easy setup)
+- **Deployment**: Vercel, Render support
+- **Performance**: Optimized builds, aggressive caching strategies
+
+## 🚀 Quick Start
 
 ### Prerequisites
-Make sure that you have installed
-- Node.js
+Ensure you have installed:
+- Node.js (18.x or higher)
 - Git
-- npm / yarn / pnpm / bun
+- npm/yarn/pnpm
 
-1. Clone this repository:
+### Installation
 
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Shreyas-29/collabuzz-platform.git
-   cd collabuzz-platform
+   git clone https://github.com/SanketsMane/Collabuzz-Website.git
+   cd Collabuzz-Website
    ```
-2. Install dependencies:
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
-3. Setup env variables:
+
+3. **Environment Setup:**
+   Create a `.env.local` file:
    ```bash
-    # app
-    NEXT_PUBLIC_URL=http://localhost:3000
-    NEXT_PUBLIC_DOMAIN=localhost:3000
+   # App Configuration
+   NEXT_PUBLIC_URL=http://localhost:3000
+   NEXT_PUBLIC_DOMAIN=localhost:3000
    
-    # clerk
-    CLERK_SECRET_KEY=
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+   # Clerk Authentication (Optional)
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
    ```
-5. Run the development server:
+
+4. **Run the development server:**
    ```bash
    npm run dev
    ```
-6. Open your browser and navigate to http://localhost:3000 to see the website in action.
 
-## Assets
-Download all the assets required for this project [here](https://drive.google.com).
+5. **Open your browser:**
+   Navigate to `http://localhost:3000` to see the platform in action!
 
-## ☕ Buy Me a Coffee
-If you enjoy using caps.ai, consider supporting my work!  
-[Buy Me a Coffee ☕](https://buymeacoffee.com/shreyas29)
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── app/                 # Next.js app directory
+│   ├── components/          # Reusable UI components
+│   ├── config/             # Configuration files
+│   ├── constants/          # Application constants
+│   ├── lib/                # Utility functions
+│   └── styles/             # Global styles
+├── public/                 # Static assets
+└── ...configuration files
+```
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+```bash
+npm run build
+# Deploy to Vercel dashboard or use Vercel CLI
+```
+
+### Render
+```bash
+npm run render:build
+npm run render:start
+```
+
+## 🎨 Custom Features
+
+- **Gradient Button Animations**: Unique CSS animations with smooth color transitions
+- **Aggressive Cache Busting**: Advanced deployment strategies for immediate updates
+- **Nuclear Deploy Script**: Complete cache invalidation system
+- **Responsive Design**: Mobile-first approach with perfect scaling
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Creator & Owner
+
+**Sanket Mane**
+- GitHub: [@SanketsMane](https://github.com/SanketsMane)
+- Project: [Collabuzz Website](https://github.com/SanketsMane/Collabuzz-Website)
+
+---
+
+<div align="center">
+
+**Built with ❤️ by Sanket Mane**
+
+*This project is my sole creation and intellectual property. No collaborators or third-party contributions.*
+
+</div>
 
    

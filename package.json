@@ -1,6 +1,21 @@
 {
   "name": "collabuzz",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "AI-Powered Influencer Marketing Platform - Complete ownership by Sanket Mane",
+  "author": {
+    "name": "Sanket Mane",
+    "email": "sanket.mane@collabuzz.com",
+    "url": "https://github.com/SanketsMane"
+  },
+  "homepage": "https://github.com/SanketsMane/Collabuzz-Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SanketsMane/Collabuzz-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SanketsMane/Collabuzz-Website/issues"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
