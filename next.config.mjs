@@ -24,6 +24,15 @@ const nextConfig = {
   generateBuildId: async () => {
     return Date.now().toString()
   },
+  trailingSlash: true,
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/:path*',
+      },
+    ];
+  },
   async headers() {
     return [
       {

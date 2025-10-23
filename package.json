@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p ${PORT:-3000}",
     "lint": "next lint",
     "build:clean": "rm -rf .next && next build",
-    "deploy": "pnpm build:clean && pnpm start"
+    "deploy": "npm run build:clean && npm start",
+    "render:build": "npm ci --silent && npm run build",
+    "render:start": "./start-render.sh"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
