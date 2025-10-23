@@ -1,6 +1,14 @@
 {
   "buildCommand": "pnpm build",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --shamefully-hoist --strict-peer-dependencies=false",
   "framework": "nextjs",
-  "nodeVersion": "18.x"
+  "nodeVersion": "18.x",
+  "env": {
+    "PNPM_FLAGS": "--shamefully-hoist --strict-peer-dependencies=false"
+  },
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  }
 }
