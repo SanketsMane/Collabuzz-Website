@@ -16,9 +16,6 @@ import InfluencersMarquee from "@/components/home/influencers-marquee";
 
 const HomePage = () => {
 
-    // FORCE CACHE BUST - Generate unique identifier for this build
-    const BUILD_HASH = "BUILD_" + Date.now() + "_" + Math.random().toString(36).substring(7);
-
     // Collabuzz testimonials data
     const collabuzzTestimonials = [
         {
@@ -130,7 +127,7 @@ const HomePage = () => {
                                 Connect with top brands for easy collaborations! 🤝 We help you find the best campaigns that fit your style in just one click! Whether you&apos;re a brand or creator, unlock the power of authentic partnerships.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
-                                <Link href="/brand" className="gradient-button rounded-lg px-8 py-3 font-semibold text-lg w-full sm:w-auto min-w-[140px] text-center" data-build={Date.now()}>
+                                <Link href="/brand" className="gradient-button rounded-lg px-8 py-3 font-semibold text-lg w-full sm:w-auto min-w-[140px] text-center">
                                     For Brands 🚀
                                 </Link>
                                 <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[140px]">
@@ -456,21 +453,14 @@ const HomePage = () => {
                             Join thousands of brands and influencers who trust Collabuzz for their marketing campaigns.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mt-6 md:mt-8 px-4 md:px-0">
-                            <Link href="/brand" className="gradient-button px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-medium text-sm md:text-base text-center" data-build={Date.now()}>
+                            <Link href="/brand" className="gradient-button px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-medium text-sm md:text-base text-center">
                                 Start as Brand ✨
                             </Link>
                             <Link href="/influencer" className="px-6 md:px-8 py-2.5 md:py-3 border border-border rounded-lg hover:bg-muted transition-colors font-medium text-sm md:text-base text-center">
                                 Join as Influencer
                             </Link>
                         </div>
-                        <div className="mt-6 text-center">
-                            <div className="inline-block px-6 py-4 bg-red-500 text-white rounded-full text-lg font-black animate-bounce border-4 border-yellow-400 shadow-2xl">
-                                � LATEST BUILD {BUILD_HASH} 🔥
-                            </div>
-                            <div className="mt-2 text-xs text-muted-foreground">
-                                If you see this, cache is cleared! Build time: {new Date().toLocaleString()}
-                            </div>
-                        </div>
+
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8 md:mt-16 max-w-2xl mx-auto px-4 md:px-0">
                             <div className="text-center">
                                 <div className="text-xl md:text-2xl font-bold text-primary">97%</div>
