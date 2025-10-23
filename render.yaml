@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: collabuzz-website
+    env: node
+    plan: free
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+      - key: PNPM_VERSION
+        value: 8.6.0
+      - key: NEXT_TELEMETRY_DISABLED
+        value: 1

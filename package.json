@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:clean": "rm -rf .next && next build",
+    "deploy": "pnpm build:clean && pnpm start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",

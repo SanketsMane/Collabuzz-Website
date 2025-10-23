@@ -4,11 +4,33 @@
   "framework": "nextjs",
   "nodeVersion": "18.x",
   "env": {
-    "PNPM_FLAGS": "--shamefully-hoist --strict-peer-dependencies=false"
+    "PNPM_FLAGS": "--shamefully-hoist --strict-peer-dependencies=false",
+    "NEXT_TELEMETRY_DISABLED": "1"
   },
   "build": {
     "env": {
       "NEXT_TELEMETRY_DISABLED": "1"
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)$",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
 }
