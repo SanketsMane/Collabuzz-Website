@@ -10,10 +10,14 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, ChevronRight, UserIcon, Zap, Search, Users, BarChart3, Sparkles, Target, HandHeart, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import BrandsMarquee from "@/components/home/brands-marquee";
 import InfluencersMarquee from "@/components/home/influencers-marquee";
 
 const HomePage = () => {
+
+    // FORCE CACHE BUST - Generate unique identifier for this build
+    const BUILD_HASH = "BUILD_" + Date.now() + "_" + Math.random().toString(36).substring(7);
 
     // Collabuzz testimonials data
     const collabuzzTestimonials = [
@@ -460,8 +464,11 @@ const HomePage = () => {
                             </Link>
                         </div>
                         <div className="mt-6 text-center">
-                            <div className="inline-block px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold animate-pulse">
-                                🚀 LIVE v2.0 - {new Date().toLocaleString()} 🚀
+                            <div className="inline-block px-6 py-4 bg-red-500 text-white rounded-full text-lg font-black animate-bounce border-4 border-yellow-400 shadow-2xl">
+                                � LATEST BUILD {BUILD_HASH} 🔥
+                            </div>
+                            <div className="mt-2 text-xs text-muted-foreground">
+                                If you see this, cache is cleared! Build time: {new Date().toLocaleString()}
                             </div>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mt-8 md:mt-16 max-w-2xl mx-auto px-4 md:px-0">
