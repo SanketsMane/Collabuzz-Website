@@ -9,7 +9,7 @@ interface Props {
 const Wrapper = ({ children, className }: Props) => {
     return (
         <div className={cn(
-            "h-full mx-auto w-full max-w-screen-xl px-4 md:px-20",
+            "h-full mx-auto w-full max-w-screen-xl px-4 sm:px-6 md:px-8 lg:px-20 overflow-x-hidden",
             className
         )}>
             {children}

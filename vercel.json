@@ -1,8 +1,7 @@
 {
-  "buildCommand": "./deploy.sh",
+  "buildCommand": "npm run build",
   "installCommand": "npm ci --silent --no-fund --no-audit --legacy-peer-deps",
   "framework": "nextjs",
-  "nodeVersion": "18.x",
   "env": {
     "NEXT_TELEMETRY_DISABLED": "1",
     "NPM_CONFIG_FUND": "false",
@@ -36,10 +35,6 @@
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
-        },
-        {
-          "key": "X-Deployment-Time",
-          "value": "<<timestamp>>"
         }
       ]
     },
@@ -51,12 +46,6 @@
           "value": "no-cache, no-store, must-revalidate, max-age=0"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
     }
   ]
 }

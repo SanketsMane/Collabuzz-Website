@@ -144,9 +144,9 @@ const SocialIcon = ({ platform }: { platform: string }) => {
 
 export default function InfluencersMarquee() {
   return (
-    <section className="py-16 bg-black overflow-hidden">
+    <section className="py-16 bg-black overflow-x-hidden">
       <div className="relative overflow-hidden">
-        <div className="flex animate-scroll-ltr space-x-6">
+        <div className="flex animate-scroll-ltr space-x-4 sm:space-x-6 min-w-max">
           {/* First set of influencers - Exact design from screenshot */}
           {influencers.map((influencer) => (
             <div
@@ -212,7 +212,7 @@ export default function InfluencersMarquee() {
               key={`second-${influencer.id}`}
               className="flex-shrink-0 group cursor-pointer"
             >
-              <div className="bg-gray-900/50 rounded-2xl p-6 w-96 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl relative overflow-hidden border border-gray-800/30">
+              <div className="bg-gray-900/50 rounded-2xl p-4 sm:p-6 w-80 sm:w-96 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-xl relative overflow-hidden border border-gray-800/30">
                 {/* Purple gradient circle background */}
                 <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full opacity-80"></div>
                 

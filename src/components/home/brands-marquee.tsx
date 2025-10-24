@@ -71,9 +71,9 @@ const brands = [
 
 export default function BrandsMarquee() {
   return (
-    <section className="py-8 bg-black overflow-hidden border-y border-gray-800/50">
+    <section className="py-8 bg-black overflow-x-hidden border-y border-gray-800/50">
       <div className="relative overflow-hidden">
-        <div className="flex animate-scroll-rtl space-x-16 md:space-x-24">
+        <div className="flex animate-scroll-rtl space-x-8 sm:space-x-16 md:space-x-24 min-w-max">
           {/* First set of brands */}
           {brands.map((brand, index) => (
             <div

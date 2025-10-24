@@ -65,11 +65,22 @@
     body {
       font-size: 14px;
       line-height: 1.5;
+      overflow-x: hidden;
+    }
+    
+    html {
+      overflow-x: hidden;
     }
     
     .container {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+    
+    /* Prevent horizontal scroll on mobile */
+    section {
+      max-width: 100vw;
+      overflow-x: hidden;
     }
   }
   :root {

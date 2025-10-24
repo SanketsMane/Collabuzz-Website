@@ -98,7 +98,7 @@ const HomePage = () => {
     const secondRow = collabuzzTestimonials.slice(Math.ceil(collabuzzTestimonials.length / 2));
 
     return (
-        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
+        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8 overflow-x-hidden">
 
             {/* hero */}
             <Wrapper>
