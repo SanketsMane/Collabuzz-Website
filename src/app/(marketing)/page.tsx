@@ -327,10 +327,12 @@ const HomePage = () => {
                                 {/* Video Container */}
                                 <div className="relative w-full aspect-video rounded-lg md:rounded-xl overflow-hidden bg-black/20 border border-border/50">
                                     <iframe
-                                        src="https://www.youtube.com/embed/4JixVdrs2C4?rel=0&modestbranding=1&showinfo=0"
+                                        src="https://www.youtube-nocookie.com/embed/4JixVdrs2C4?rel=0&modestbranding=1&showinfo=0&controls=1&disablekb=0&enablejsapi=0&fs=1&iv_load_policy=3&loop=0&origin=https://collabuzz.com&playsinline=1&start=0&widget_referrer=https://collabuzz.com"
                                         title="Collabuzz - Influencer Marketing Platform Demo"
                                         className="absolute inset-0 w-full h-full"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        frameBorder="0"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
                                         allowFullScreen
                                     ></iframe>
                                 </div>
