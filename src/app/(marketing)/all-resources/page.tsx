@@ -283,7 +283,7 @@ export default function AllResourcesPage() {
             <p className="text-sm text-muted-foreground mt-6">
               Join 10,000+ marketers and creators already subscribed
             </p>
-            <div className="mt-8 p-6 bg-muted/30 rounded-lg">
+            <div className="mt-8 p-6 bg-card/30 rounded-lg">
               <p className="text-sm text-muted-foreground">
                 <strong>Weekly Updates:</strong> New resources, industry insights, case studies | 
                 <strong> Zero Spam:</strong> Unsubscribe anytime | 

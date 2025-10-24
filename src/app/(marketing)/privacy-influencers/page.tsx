@@ -316,7 +316,7 @@ export default function PrivacyInfluencersPage() {
                 <Link href="/dashboard/privacy">Privacy Settings</Link>
               </Button>
             </div>
-            <div className="mt-8 p-6 bg-muted/30 rounded-lg">
+            <div className="mt-8 p-6 bg-card/30 rounded-lg">
               <p className="text-sm text-muted-foreground">
                 <strong>Creator Hotline:</strong> +91-8088081498 | 
                 <strong> Privacy Team:</strong> creators@collabuzz.com | 
