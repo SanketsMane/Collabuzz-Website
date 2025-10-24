@@ -294,113 +294,40 @@ export default function AllResourcesPage() {
         </Container>
       </Wrapper>
 
-      {/* Resource Categories */}
-      <Wrapper>
-        <Container>
-          <div className="flex flex-col items-center justify-center py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Resource <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Categories</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-center mb-12">
-            Explore our comprehensive collection of resources designed to help you succeed in influencer marketing.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {resourceCategories.map((category, index) => {
-            const IconComponent = category.icon;
-            return (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 ${category.color}`}>
-                  <IconComponent className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{category.title}</h3>
-                <div className="text-2xl font-bold text-purple-600 mb-2">{category.count}</div>
-                <p className="text-gray-600">{category.description}</p>
-              </div>
-            );
-          })}
-          </div>
-        </Container>
-      </Wrapper>
 
-      {/* Featured Resources */}
-      <Wrapper>
-        <Container>
-          <div className="flex flex-col items-center justify-center py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Featured <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Resources</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-center mb-12">
-              Our most popular and comprehensive resources for influencer marketing success.
-            </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredResources.map((resource, index) => (
-              <div key={index} className={`rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
-                resource.featured ? 'bg-gradient-to-br from-purple-600 to-purple-700 text-white' : 'bg-white'
-              }`}>
-                {resource.featured && (
-                  <div className="bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-sm font-bold text-center mb-4">
-                    Featured
-                  </div>
-                )}
-                <div className="mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                    resource.featured ? 'bg-purple-500 text-white' : 'bg-purple-100 text-purple-800'
-                  }`}>
-                    {resource.type}
-                  </span>
-                </div>
-                <h3 className={`text-lg font-bold mb-3 ${resource.featured ? 'text-white' : 'text-foreground'}`}>
-                  {resource.title}
-                </h3>
-                <p className={`text-sm mb-4 ${resource.featured ? 'text-purple-100' : 'text-gray-600'}`}>
-                  {resource.description}
-                </p>
-                <div className={`flex items-center justify-between text-sm ${resource.featured ? 'text-purple-200' : 'text-gray-500'}`}>
-                  <span>{resource.downloadCount} downloads</span>
-                  <span>{resource.category}</span>
-                </div>
-                <button className={`w-full mt-4 py-2 rounded-lg font-semibold transition-colors ${
-                  resource.featured
-                    ? 'bg-white text-purple-600 hover:bg-gray-100'
-                    : 'bg-purple-600 text-white hover:bg-purple-700'
-                }`}>
-                  <Download className="w-4 h-4 inline mr-2" />
-                  Download
-                </button>
-              </div>
-            ))}
-          </div>
-          </div>
-        </Container>
-      </Wrapper>
+
+
 
       {/* Guides Library */}
-      <Wrapper>
+      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
         <Container>
-          <div className="flex flex-col items-center justify-center py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Complete Guide <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Library</span>
+          <div className="max-w-md mx-auto text-start md:text-center mb-12">
+            <SectionBadge title="Guides Library" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
+              📚 Complete Guide Library
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-center mb-12">
-              In-depth guides covering every aspect of influencer marketing strategy and execution.
+            <p className="text-muted-foreground mt-6">
+              In-depth guides covering every aspect of influencer marketing strategy and execution
             </p>
+          </div>
+        </Container>
         
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <Container>
+          <div className="flex flex-col items-center justify-center py-10 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
               {guides.map((guide, index) => (
-                <div key={index} className="bg-muted/20 rounded-xl p-6 border hover:bg-muted/30 transition-colors">
+                <div key={index} className="flex flex-col p-6 border border-border rounded-lg bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-center mb-4">
-                    <div className="p-2 bg-primary/10 rounded-full mr-3">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mr-3">
                       <BookOpen className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-medium">
                       {guide.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{guide.title}</h3>
-                  <p className="text-muted-foreground mb-4">{guide.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{guide.title}</h3>
+                  <p className="text-muted-foreground mb-4 flex-grow">{guide.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">{guide.pages}</span>
                     <Button size="sm">
@@ -416,26 +343,31 @@ export default function AllResourcesPage() {
       </Wrapper>
 
       {/* Tools & Templates */}
-      <Wrapper>
+      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
         <Container>
-          <div className="flex flex-col items-center justify-center py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-              Tools & <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Templates</span>
+          <div className="max-w-md mx-auto text-start md:text-center mb-12">
+            <SectionBadge title="Tools & Templates" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
+              🛠️ Tools & Templates
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-center mb-12">
-              Ready-to-use tools and templates to streamline your influencer marketing workflow.
+            <p className="text-muted-foreground mt-6">
+              Ready-to-use tools and templates to streamline your influencer marketing workflow
             </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+          </div>
+        </Container>
+        
+        <Container>
+          <div className="flex flex-col items-center justify-center py-10 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-6">
               {tools.map((tool, index) => (
-                <div key={index} className="bg-muted/20 rounded-xl p-4 hover:bg-muted/30 transition-colors">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <FileText className="w-5 h-5 text-primary mr-3" />
-                      <span className="font-medium">{tool}</span>
+                <div key={index} className="flex items-center justify-between p-4 border border-border rounded-lg bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                  <div className="flex items-center">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 mr-3">
+                      <FileText className="w-4 h-4 text-primary" />
                     </div>
-                    <Download className="w-4 h-4 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                    <span className="font-medium text-foreground text-sm">{tool}</span>
                   </div>
+                  <Download className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
                 </div>
               ))}
             </div>
