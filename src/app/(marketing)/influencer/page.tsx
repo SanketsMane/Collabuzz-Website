@@ -107,6 +107,9 @@ const InfluencerPage = () => {
 
     return (
         <div className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
+            {/* Grid background */}
+            <div className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+            
             {/* Hero Section */}
             <Wrapper>
                 <Container>
@@ -127,6 +130,36 @@ const InfluencerPage = () => {
                                 <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[140px]">
                                     <Link href="/about">Learn More</Link>
                                 </Button>
+                            </div>
+
+                            {/* App Store Download Buttons */}
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                                <a 
+                                    href="#" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-block transition-transform hover:scale-105"
+                                >
+                                    <img 
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                                        alt="Download on the App Store" 
+                                        style={{ height: '50px', width: 'auto' }} 
+                                        height="50"
+                                    />
+                                </a>
+                                <a 
+                                    href="#" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-block transition-transform hover:scale-105"
+                                >
+                                    <img 
+                                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                        alt="Get it on Google Play" 
+                                        style={{ height: '50px', width: 'auto' }} 
+                                        height="50"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>

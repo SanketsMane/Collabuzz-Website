@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  /* Fix double scrollbar issue */
+  html {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  
   /* Mobile-first responsive utilities */
   .container {
     @apply px-4 sm:px-6 lg:px-8;
@@ -313,7 +325,7 @@
 }
 
 .gradient-button {
-  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background: linear-gradient(-45deg, #3f00b5, #7c3aed, #9f69fe, #a855f7, #3f00b5);
   background-size: 800% 400%;
   border: none;
   color: white;

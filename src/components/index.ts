@@ -9,6 +9,7 @@ import InfluencersMarquee from "./home/influencers-marquee";
 import Icons from "./global/icons";
 import Wrapper from "./global/wrapper";
 import Container from "./global/container";
+import FloatingWidgets from "./global/floating-widgets";
 
 export {
     Providers,
@@ -20,4 +21,5 @@ export {
     Container,
     BrandsMarquee,
     InfluencersMarquee,
+    FloatingWidgets,
 }

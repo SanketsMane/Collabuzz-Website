@@ -2,6 +2,7 @@ import { SITE_CONFIG } from "@/config";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
+import { FloatingWidgets } from "@/components";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export default function RootLayout({
 }) {
     const buildTime = Date.now();
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
             <head>
                 <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
                 <meta httpEquiv="Pragma" content="no-cache" />
@@ -22,7 +23,21 @@ export default function RootLayout({
                 <meta name="build-time" content={buildTime.toString()} />
                 <meta name="cache-bust" content={`v${buildTime}`} />
                 <meta name="referrer" content="strict-origin-when-cross-origin" />
-                <meta httpEquiv="Content-Security-Policy" content="frame-src 'self' https://www.youtube-nocookie.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube-nocookie.com;" />
+                <meta httpEquiv="Content-Security-Policy" content="frame-src 'self' https://www.youtube-nocookie.com https://calendly.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube-nocookie.com https://www.googletagmanager.com https://assets.calendly.com;" />
+                
+                {/* Google Analytics */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-5TWSSK9KH0"></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-5TWSSK9KH0');
+                        `
+                    }}
+                />
+                
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
@@ -46,12 +61,13 @@ export default function RootLayout({
             </head>
             <body
                 className={cn(
-                    "min-h-screen bg-background text-foreground antialiased max-w-full overflow-x-hidden",
+                    "min-h-screen bg-background text-foreground antialiased w-full",
                     font.className,
                 )}
                 data-build-time={buildTime}
             >
                 {children}
+                <FloatingWidgets />
             </body>
         </html>
     );

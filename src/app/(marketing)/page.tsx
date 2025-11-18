@@ -98,7 +98,7 @@ const HomePage = () => {
     const secondRow = collabuzzTestimonials.slice(Math.ceil(collabuzzTestimonials.length / 2));
 
     return (
-        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8 overflow-x-hidden">
+        <section className="w-full relative flex items-center justify-center flex-col overflow-x-hidden">
 
             {/* hero */}
             <Wrapper>
@@ -130,9 +130,9 @@ const HomePage = () => {
                                 <Link href="/brand" className="gradient-button rounded-lg px-8 py-3 font-semibold text-lg w-full sm:w-auto min-w-[140px] text-center">
                                     For Brands 🚀
                                 </Link>
-                                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[140px]">
-                                    <Link href="/influencer">For Influencer</Link>
-                                </Button>
+                                <Link href="/influencer" className="gradient-button rounded-lg px-8 py-3 font-semibold text-lg w-full sm:w-auto min-w-[140px] text-center">
+                                    For Influencer ✨
+                                </Link>
                             </div>
                             <div className="hidden md:flex relative items-center justify-center mt-6 w-full">
                                 <Link href="/about" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-4 py-2 gap-4 shadow-3xl shadow-background/40 cursor-pointer select-none">

@@ -1,5 +1,5 @@
 import Icons from "@/components/global/icons"
-import { Heart } from 'lucide-react'
+import { Heart, Instagram, Facebook, Linkedin, Youtube } from 'lucide-react'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -22,6 +22,46 @@ const Footer = () => {
                         Made in India with
                         <Heart className="w-3.5 h-3.5 ml-1 fill-primary text-primary" />
                     </span>
+                    
+                    {/* Social Media Links */}
+                    <div className="flex items-center gap-3 mt-6">
+                        <a 
+                            href="https://www.instagram.com/collabuzzz" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                            aria-label="Instagram"
+                        >
+                            <Instagram className="w-5 h-5" />
+                        </a>
+                        <a 
+                            href="https://www.facebook.com/collabuzz" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                            aria-label="Facebook"
+                        >
+                            <Facebook className="w-5 h-5" />
+                        </a>
+                        <a 
+                            href="https://www.linkedin.com/company/collabuzz" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                            aria-label="LinkedIn"
+                        >
+                            <Linkedin className="w-5 h-5" />
+                        </a>
+                        <a 
+                            href="https://www.youtube.com/@collabuzz" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                            aria-label="YouTube"
+                        >
+                            <Youtube className="w-5 h-5" />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-16 xl:col-span-2 xl:mt-0">
@@ -288,13 +328,62 @@ const Footer = () => {
 
             </div>
 
-            <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 flex flex-col md:flex-row md:items-center md:justify-between w-full gap-4 md:gap-0">
-                <p className="text-sm text-muted-foreground text-center md:text-left">
-                    &copy; {new Date().getFullYear()} Collabuzz. All rights reserved.
-                </p>
-                <p className="text-sm text-muted-foreground text-center md:text-right">
-                    Empowering Creators & Brands Worldwide
-                </p>
+            <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 w-full">
+                <div className="flex flex-col items-center justify-center gap-6 mb-6">
+                    {/* Product Hunt Badge */}
+                    <a 
+                        href="https://www.producthunt.com/products/collabuzz?utm_source=badge-follow&utm_medium=badge&utm_source=badge-collabuzz" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                    >
+                        <img 
+                            src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=966380&theme=light" 
+                            alt="Collabuzz - Influencer marketing platform | Product Hunt" 
+                            style={{ width: '250px', height: '54px' }} 
+                            width="250" 
+                            height="54" 
+                        />
+                    </a>
+                    
+                    {/* App Store Download Buttons */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a 
+                            href="#" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-block transition-transform hover:scale-105"
+                        >
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                                alt="Download on the App Store" 
+                                style={{ height: '40px', width: 'auto' }} 
+                                height="40"
+                            />
+                        </a>
+                        <a 
+                            href="#" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-block transition-transform hover:scale-105"
+                        >
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                alt="Get it on Google Play" 
+                                style={{ height: '40px', width: 'auto' }} 
+                                height="40"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
+                    <p className="text-sm text-muted-foreground text-center md:text-left">
+                        &copy; {new Date().getFullYear()} Collabuzz. All rights reserved.
+                    </p>
+                    <p className="text-sm text-muted-foreground text-center md:text-right">
+                        Empowering Creators & Brands Worldwide
+                    </p>
+                </div>
             </div>
 
         </footer>
