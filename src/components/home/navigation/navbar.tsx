@@ -14,11 +14,12 @@ const Navbar = () => {
             <Container reverse>
                 <div className="flex items-center justify-between h-full mx-auto md:max-w-screen-xl">
                     <div className="flex items-start">
-                        <Link href="/" className="flex items-center gap-2">
-                            <Icons.logo className="w-6 h-6 md:w-8 md:h-8" />
-                            <span className="text-base md:text-lg font-medium">
-                                Collabuzz
-                            </span>
+                        <Link href="/" className="flex items-center">
+                            <img 
+                                src="/images/web_logo_white.png" 
+                                alt="Collabuzz" 
+                                className="h-8 md:h-10 w-auto"
+                            />
                         </Link>
                     </div>
                     <nav className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">

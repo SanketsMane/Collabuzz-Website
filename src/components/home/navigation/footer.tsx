@@ -13,7 +13,11 @@ const Footer = () => {
 
                 <div className="flex flex-col items-start justify-start md:max-w-[200px]">
                     <div className="flex items-start">
-                        <Icons.logo className="w-7 h-7" />
+                        <img 
+                            src="/images/web_logo_white.png" 
+                            alt="Collabuzz" 
+                            className="h-8 w-auto"
+                        />
                     </div>
                     <p className="text-muted-foreground mt-4 text-sm text-start">
                         Connect creators with brands for authentic influencer partnerships
