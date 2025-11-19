@@ -48,11 +48,11 @@ const AboutPage = () => {
                     <div className="flex flex-col items-center justify-center py-20 h-full">
                         <SectionBadge title="About Us" />
                         
-                        <div className="flex flex-col items-center mt-6 md:mt-8 max-w-4xl w-11/12 md:w-full px-4 md:px-0">
-                            <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl leading-tight md:!leading-snug font-semibold text-center">
-                                <span className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl">🎯</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">The Ultimate Digital Platform for Influencer Marketing Campaigns</span> <span className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl">✨</span>
+                        <div className="flex flex-col items-center mt-6 md:mt-8 max-w-6xl w-11/12 md:w-full px-4 md:px-0">
+                            <h1 className="hero-heading font-semibold text-center optimal-text-wrap">
+                                <span className="hero-heading">🎯</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">The Ultimate Digital Platform for Influencer Marketing Campaigns</span> <span className="hero-heading">✨</span>
                             </h1>
-                            <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-3xl px-2 md:px-0">
+                            <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-4xl px-2 md:px-0 leading-relaxed optimal-text-wrap">
                                 Collabuzz 🤝 is the premier platform connecting 🧑‍💻 creators and 💼 brands. We foster authentic partnerships 🤝 that empower ✨ influencers to build thriving businesses 🚀 while helping brands achieve their marketing goals 🎯. Join our vibrant community 🎉 and unlock the power of collaborative success! 💪
                             </p>
                             
@@ -75,7 +75,7 @@ const AboutPage = () => {
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 py-6 md:py-10 px-4 md:px-0">
                         {stats.map((stat, index) => (
                             <div key={index} className="text-center">
-                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">{stat.value}</h3>
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary optimal-text-wrap">{stat.value}</h3>
                                 <p className="text-xs md:text-sm text-muted-foreground mt-1 md:mt-2">{stat.label}</p>
                             </div>
                         ))}
@@ -91,7 +91,7 @@ const AboutPage = () => {
                 <Container>
                     <div className="max-w-md mx-auto text-start md:text-center mb-12">
                         <SectionBadge title="Why Choose Us" />
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0 optimal-text-wrap">
                             🚀 Why Choose Collabuzz for Influencer Marketing?
                         </h2>
                         <p className="text-muted-foreground mt-6">

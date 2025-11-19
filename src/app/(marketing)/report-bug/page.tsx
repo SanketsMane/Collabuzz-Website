@@ -91,7 +91,7 @@ export default function ReportBugPage() {
             <SectionBadge title="Support" />
             
             <div className="flex flex-col items-center mt-6 md:mt-8 max-w-4xl w-11/12 md:w-full px-4 md:px-0">
-              <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl leading-tight md:!leading-snug font-semibold text-center">
+              <h1 className="hero-heading font-semibold text-center optimal-text-wrap">
                 <span className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl">🐛</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Report a Bug & Help Us Improve</span> <span className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl">✨</span>
               </h1>
               <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-3xl px-2 md:px-0">

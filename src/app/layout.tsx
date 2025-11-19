@@ -61,7 +61,7 @@ export default function RootLayout({
             </head>
             <body
                 className={cn(
-                    "min-h-screen bg-background text-foreground antialiased w-full",
+                    "min-h-screen bg-background text-foreground antialiased overflow-x-hidden",
                     font.className,
                 )}
                 data-build-time={buildTime}

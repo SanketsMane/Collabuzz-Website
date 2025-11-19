@@ -20,14 +20,14 @@ export default function LegalPage() {
           <div className="flex flex-col items-center justify-center py-20 w-full">
             <div className="max-w-md mx-auto text-start md:text-center">
               <SectionBadge title="Legal Information" />
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
+              <h1 className="hero-heading font-semibold text-center optimal-text-wrap mt-4 md:mt-6 px-4 md:px-0">
                 ⚖️ Legal
                 <br />
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Information Hub
                 </span>
               </h1>
-              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0">
+              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0 leading-relaxed optimal-text-wrap max-w-3xl mx-auto">
                 Find all legal information, terms of service, privacy policies, and compliance details for Collabuzz platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -289,7 +289,7 @@ export default function LegalPage() {
         <Container>
           <div className="flex flex-col items-center justify-center py-16" id="contact">
             <div className="max-w-3xl mx-auto text-center p-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10 rounded-lg">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 optimal-text-wrap">
                 Legal <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Support</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-8">

@@ -102,7 +102,7 @@ const HomePage = () => {
 
             {/* hero */}
             <Wrapper>
-                <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />
+                <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-full max-h-[150vh] overflow-hidden" />
 
                 <Container>
                     <div className="flex flex-col items-center justify-center py-20 h-full">
@@ -119,11 +119,11 @@ const HomePage = () => {
                             </span>
                         </button>
 
-                        <div className="flex flex-col items-center mt-4 md:mt-8 w-full max-w-4xl px-4 sm:px-6 md:px-8">
-                            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-semibold text-center">
-                                <span className="text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">🌟</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Discover Exciting Collabs with Top Brands!</span>
+                        <div className="flex flex-col items-center mt-4 md:mt-8 w-full max-w-6xl px-4 sm:px-6 md:px-8">
+                            <h1 className="hero-heading font-semibold text-center optimal-text-wrap">
+                                <span className="hero-heading">🌟</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Discover Exciting Collabs with Top Brands!</span>
                             </h1>
-                            <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-2xl">
+                            <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-4xl leading-relaxed optimal-text-wrap">
                                 Connect with top brands for easy collaborations! 🤝 We help you find the best campaigns that fit your style in just one click! Whether you&apos;re a brand or creator, unlock the power of authentic partnerships.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
@@ -148,13 +148,13 @@ const HomePage = () => {
                             <div className="w-full max-w-xs sm:max-w-sm md:max-w-4xl mx-auto rounded-lg md:rounded-xl lg:rounded-2xl p-2 sm:p-3 md:p-4 ring-1 md:ring-2 ring-primary/20 bg-card/30 backdrop-blur-xl border border-primary/10 md:border-2">
                                 <div className="relative w-full h-[320px] sm:h-[350px] md:h-[450px] lg:h-[550px] rounded-md md:rounded-lg lg:rounded-xl bg-gradient-to-br from-card/50 to-muted/30 shadow-xl md:shadow-2xl border border-border overflow-hidden">
                                     
-                                    {/* LARGE VISIBLE CENTER ELEMENT - Mobile optimized */}
-                                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-50">
-                                        <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 bg-primary rounded-lg sm:rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg sm:shadow-xl md:shadow-2xl mx-auto mb-2 sm:mb-3 md:mb-4">
-                                            <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-primary-foreground" />
+                                    {/* LARGE VISIBLE CENTER ELEMENT - Desktop only */}
+                                    <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-50">
+                                        <div className="w-24 h-24 bg-primary rounded-2xl flex items-center justify-center shadow-2xl mx-auto mb-4">
+                                            <Sparkles className="w-12 h-12 text-primary-foreground" />
                                         </div>
-                                        <h2 className="text-base sm:text-lg md:text-xl font-bold text-foreground mb-1 md:mb-2">Collabuzz</h2>
-                                        <p className="text-xs sm:text-xs md:text-sm text-muted-foreground">Influencer Marketing Platform</p>
+                                        <h2 className="text-xl font-bold text-foreground mb-2">Collabuzz</h2>
+                                        <p className="text-sm text-muted-foreground">Influencer Marketing Platform</p>
                                     </div>
                                     
                                     {/* Dashboard Header - Mobile optimized */}
@@ -291,7 +291,7 @@ const HomePage = () => {
                 <Container>
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="Why Choose Collabuzz" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6 optimal-text-wrap text-center">
                             🚀 Why Choose Collabuzz for Influencer Marketing?
                         </h2>
                         <p className="text-muted-foreground mt-6">
@@ -408,7 +408,7 @@ const HomePage = () => {
                 <Container>
                     <div className="max-w-md md:max-w-2xl mx-auto text-center px-4 md:px-0">
                         <SectionBadge title="Features" />
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 optimal-text-wrap">
                             Discover our powerful features
                         </h2>
                         <p className="text-sm md:text-base text-muted-foreground mt-4 md:mt-6">
@@ -448,7 +448,7 @@ const HomePage = () => {
                 <Container>
                     <div className="max-w-4xl mx-auto text-center">
                         <SectionBadge title="Get Started" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6 optimal-text-wrap text-center">
                             Ready to Get Started?
                         </h2>
                         <p className="text-muted-foreground mt-6 text-lg">
@@ -491,7 +491,7 @@ const HomePage = () => {
                 <Container>
                     <div className="max-w-md md:max-w-2xl mx-auto text-center px-4">
                         <SectionBadge title="Our Customers" />
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 optimal-text-wrap">
                             What people are saying
                         </h2>
                         <p className="text-sm md:text-base text-muted-foreground mt-4 md:mt-6">

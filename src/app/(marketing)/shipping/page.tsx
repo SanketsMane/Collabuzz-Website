@@ -86,7 +86,7 @@ export default function ShippingPage() {
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center mb-12">
             <SectionBadge title="How It Works" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0 optimal-text-wrap">
               ⚡ Digital Delivery Features
             </h2>
             <p className="text-muted-foreground mt-6">

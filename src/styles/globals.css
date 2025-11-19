@@ -5,14 +5,14 @@
 @layer base {
   /* Fix double scrollbar issue */
   html {
-    overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
   
   body {
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
   }
   
   /* Mobile-first responsive utilities */
@@ -26,6 +26,22 @@
   
   .heading-responsive {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  /* Improved text wrapping for headlines */
+  .hero-heading {
+    @apply text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    line-height: 1.1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .optimal-text-wrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-wrap: balance;
   }
   
   .section-padding {
@@ -78,6 +94,7 @@
       font-size: 14px;
       line-height: 1.5;
       overflow-x: hidden;
+      width: 100%;
     }
     
     html {
@@ -91,10 +108,44 @@
     
     /* Prevent horizontal scroll on mobile */
     section {
-      max-width: 100vw;
+      max-width: 100%;
       overflow-x: hidden;
     }
+    
+    /* Ensure full width elements don't cause overflow */
+    .w-full {
+      width: 100%;
+      max-width: 100%;
+    }
   }
+
+  /* Fixed header support */
+  .fixed-header-offset {
+    padding-top: 3rem; /* 48px - height of mobile header */
+  }
+
+  @media (min-width: 640px) {
+    .fixed-header-offset {
+      padding-top: 3.5rem; /* 56px - height of desktop header */
+    }
+  }
+
+  /* Prevent unwanted scroll bars */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Ensure consistent scrollbar handling */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Simple scroll bar fix */
+  body {
+    width: 100%;
+  }
+  
   :root {
     /* Name: custom color palette
        Author: Ilias Ism
@@ -103,16 +154,16 @@
     /* CSS: .bg-gradient { background: var(--gradient) } */
     --gradient: linear-gradient(to top left, #8b5cf6, #a855f7);
 
-    --background: 220 65% 3.52%;
+    --background: 225 34% 8%;
     --foreground: 220 10% 97.2%;
 
     --muted: 220 50% 13.2%;
     --muted-foreground: 220 10% 54.4%;
 
-    --popover: 220 45% 5.72%;
+    --popover: 225 34% 8%;
     --popover-foreground: 220 10% 97.2%;
 
-    --card: 220 45% 5.72%;
+    --card: 225 34% 8%;
     --card-foreground: 220 10% 97.2%;
 
     --border: 220 50% 13.2%;
@@ -342,3 +393,4 @@
   animation: gradient 3s infinite;
   transform: scale(0.8);
 }
+

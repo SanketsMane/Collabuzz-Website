@@ -16,7 +16,7 @@ const Footer = () => {
                         <img 
                             src="/images/web_logo_white.png" 
                             alt="Collabuzz" 
-                            className="h-8 w-auto"
+                            className="h-12 w-auto"
                         />
                     </div>
                     <p className="text-muted-foreground mt-4 text-sm text-start">
@@ -65,6 +65,55 @@ const Footer = () => {
                         >
                             <Youtube className="w-5 h-5" />
                         </a>
+                    </div>
+                    
+                    {/* Product Hunt and App Store Links */}
+                    <div className="flex flex-col items-start gap-3 mt-6">
+                        {/* Product Hunt Badge */}
+                        <a 
+                            href="https://www.producthunt.com/products/collabuzz?utm_source=badge-follow&utm_medium=badge&utm_source=badge-collabuzz" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-block transition-transform hover:scale-105"
+                        >
+                            <img 
+                                src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=966380&theme=light" 
+                                alt="Collabuzz - Influencer marketing platform | Product Hunt" 
+                                style={{ width: '200px', height: '43px' }} 
+                                width="200" 
+                                height="43" 
+                            />
+                        </a>
+                        
+                        {/* App Store Download Buttons */}
+                        <div className="flex flex-col gap-2">
+                            <a 
+                                href="#" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block transition-transform hover:scale-105"
+                            >
+                                <img 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                                    alt="Download on the App Store" 
+                                    style={{ height: '35px', width: 'auto' }} 
+                                    height="35"
+                                />
+                            </a>
+                            <a 
+                                href="#" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block transition-transform hover:scale-105"
+                            >
+                                <img 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                    alt="Get it on Google Play" 
+                                    style={{ height: '35px', width: 'auto' }} 
+                                    height="35"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -333,53 +382,6 @@ const Footer = () => {
             </div>
 
             <div className="mt-8 border-t border-border/40 pt-4 md:pt-8 w-full">
-                <div className="flex flex-col items-center justify-center gap-6 mb-6">
-                    {/* Product Hunt Badge */}
-                    <a 
-                        href="https://www.producthunt.com/products/collabuzz?utm_source=badge-follow&utm_medium=badge&utm_source=badge-collabuzz" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-block"
-                    >
-                        <img 
-                            src="https://api.producthunt.com/widgets/embed-image/v1/follow.svg?product_id=966380&theme=light" 
-                            alt="Collabuzz - Influencer marketing platform | Product Hunt" 
-                            style={{ width: '250px', height: '54px' }} 
-                            width="250" 
-                            height="54" 
-                        />
-                    </a>
-                    
-                    {/* App Store Download Buttons */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a 
-                            href="#" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-block transition-transform hover:scale-105"
-                        >
-                            <img 
-                                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
-                                alt="Download on the App Store" 
-                                style={{ height: '40px', width: 'auto' }} 
-                                height="40"
-                            />
-                        </a>
-                        <a 
-                            href="#" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-block transition-transform hover:scale-105"
-                        >
-                            <img 
-                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-                                alt="Get it on Google Play" 
-                                style={{ height: '40px', width: 'auto' }} 
-                                height="40"
-                            />
-                        </a>
-                    </div>
-                </div>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full gap-2">
                     <p className="text-sm text-muted-foreground text-center md:text-left">
                         &copy; {new Date().getFullYear()} Collabuzz. All rights reserved.

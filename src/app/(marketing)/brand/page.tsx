@@ -1,15 +1,28 @@
+"use client";
+
 import { Container, Wrapper } from "@/components";
 import { Button } from "@/components/ui/button";
 import SectionBadge from "@/components/ui/section-badge";
-import { ArrowRight, Target, TrendingUp, Users, BarChart3, Shield, Zap, CheckCircle, Star, Building2, Globe, MessageSquare } from "lucide-react";
+import { ArrowRight, Target, TrendingUp, Users, BarChart3, Shield, Zap, CheckCircle, Star, Building2, Globe, MessageSquare, Loader2, AlertCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
+import { useState, useEffect } from "react";
 
-export const metadata: Metadata = {
-    title: "For Brands - Collabuzz",
-    description: "Discover authentic influencer partnerships that drive real results. Connect with verified creators who align with your brand values and reach your target audience effectively.",
-};
+// Define types for the API response
+interface SubscriptionPlan {
+    _id: string;
+    planName: string;
+    planType: string;
+    price: number;
+    durationDays: number;
+    features: string[];
+    isActive: boolean;
+}
+
+interface APIResponse {
+    success: boolean;
+    data: SubscriptionPlan[];
+}
 
 const BrandPage = () => {
     const brandFeatures = [
@@ -54,65 +67,129 @@ const BrandPage = () => {
         "Fraud protection and authenticity verification"
     ];
 
-    const pricingTiers = [
+    const [subscriptionPlans, setSubscriptionPlans] = useState<SubscriptionPlan[]>([]);
+    const [isLoadingPlans, setIsLoadingPlans] = useState(true);
+    const [plansError, setPlansError] = useState<string | null>(null);
+
+    // Fetch subscription plans on component mount
+    useEffect(() => {
+        const fetchSubscriptionPlans = async () => {
+            try {
+                setIsLoadingPlans(true);
+                setPlansError(null);
+                
+                // Add timeout to prevent hanging requests
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000);
+                
+                const response = await fetch("https://api.collabuzz.com/api/public/subscription/plans", {
+                    signal: controller.signal,
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (response.ok) {
+                    const data: APIResponse = await response.json();
+                    if (data.success && data.data && data.data.length > 0) {
+                        setSubscriptionPlans(data.data);
+                        console.log("Successfully loaded pricing plans from API");
+                    } else {
+                        console.log("API returned no plans, using fallback pricing");
+                    }
+                } else {
+                    console.log("API request failed, using fallback pricing");
+                }
+            } catch (error) {
+                console.log("Failed to fetch pricing plans, using fallback pricing:", error);
+                // Don't set error state - just use fallback pricing
+            } finally {
+                setIsLoadingPlans(false);
+            }
+        };
+
+        fetchSubscriptionPlans();
+    }, []);
+
+    // Fallback static pricing data
+    const staticPricingPlans = [
         {
             name: "Starter",
             price: "Free",
             period: "",
-            description: "Perfect for small businesses starting with influencer marketing",
+            description: "Perfect for small businesses getting started",
             features: [
-                "1 Campaign Creation",
-                "5 Influencer Shortlists",
-                "Basic Analytics Dashboard",
-                "Email support"
+                "Up to 5 influencer contacts per month",
+                "Basic analytics dashboard",
+                "Email support",
+                "Campaign templates",
+                "Community access"
             ],
             highlighted: false
         },
         {
             name: "Growth",
-            price: "₹1999",
-            period: "/ 30 days",
-            description: "Ideal for growing brands with regular campaigns",
+            price: "₹9,999",
+            period: "/ month",
+            description: "Ideal for growing brands and agencies",
             features: [
-                "5 Campaign Creations",
-                "Access to 500 Influencers",
-                "AI Brief Creation",
-                "Campaign Insights Dashboard"
+                "Up to 50 influencer contacts per month",
+                "Advanced analytics & reporting",
+                "Priority email support",
+                "Custom campaign workflows",
+                "Bulk outreach tools",
+                "Contract management"
             ],
             highlighted: false
         },
         {
-            name: "Professional", 
-            price: "₹4999",
-            period: "/ 90 days",
-            description: "Most popular plan for established brands",
+            name: "Pro",
+            price: "₹19,999",
+            period: "/ month",
+            description: "For established brands with high volume",
             features: [
-                "Up to 15 campaigns per month",
-                "Shortlist 150 Influencers",
-                "AI Campaign Assistance",
-                "Real-Time Chat Access",
-                "Advanced analytics & reporting",
-                "Priority support"
+                "Unlimited influencer contacts",
+                "Real-time campaign tracking",
+                "Phone & chat support",
+                "White-label reporting",
+                "API access",
+                "Dedicated account manager",
+                "Advanced filtering & search"
             ],
             highlighted: true
         },
         {
             name: "Enterprise",
-            price: "₹9999",
-            period: "/ 180 days",
-            description: "Current Plan - For large brands with complex requirements",
+            price: "Custom",
+            period: "",
+            description: "Tailored solutions for large organizations",
             features: [
-                "Unlimited Campaigns*",
-                "Upto 2000 Shortlists",
-                "Dedicated account manager",
-                "AI Campaign Creation & Analytics",
-                "White-label reports",
-                "Chat Access",
-                "24/7 priority support"
+                "Custom integrations",
+                "On-premise deployment option",
+                "24/7 premium support",
+                "Custom reporting dashboards",
+                "Team collaboration tools",
+                "Advanced security features",
+                "Training & onboarding"
             ],
             highlighted: false
         }
     ];
+
+    // Transform API data to match component expectations, fallback to static data
+    const transformedPlans = subscriptionPlans.length > 0 
+        ? subscriptionPlans.map((plan, index) => ({
+            name: plan.planName,
+            price: plan.price === 0 ? "Free" : `₹${plan.price}`,
+            period: plan.price === 0 ? "" : `/ ${plan.durationDays} days`,
+            description: `${plan.planType} plan for ${plan.durationDays} days`,
+            features: plan.features,
+            highlighted: index === 2 // Make the 3rd plan highlighted by default
+        }))
+        : staticPricingPlans;
 
     return (
         <div className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
@@ -125,8 +202,8 @@ const BrandPage = () => {
                     <div className="flex flex-col items-center justify-center py-20 h-full">
                         <div className="flex flex-col items-center mt-6 md:mt-8 w-full max-w-4xl px-4 sm:px-6 md:px-8">
                             <SectionBadge title="For Brands" />
-                            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-semibold text-center mt-6">
-                                <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">🎯</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Scale Your Brand with Authentic Influencer Partnerships</span>
+                            <h1 className="hero-heading font-semibold text-center optimal-text-wrap mt-6">
+                                <span className="hero-heading">🎯</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Scale Your Brand with Authentic Influencer Partnerships</span>
                             </h1>
                             <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-2xl">
                                 Connect with verified influencers who align with your brand values. Drive authentic engagement, increase conversions, and build lasting customer relationships through strategic influencer collaborations.
@@ -134,7 +211,7 @@ const BrandPage = () => {
                             
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mt-6 md:mt-8 w-full">
                                 <Button asChild size="lg" className="w-full sm:w-auto min-w-[160px]">
-                                    <Link href="/contact">Start Your Campaign</Link>
+                                    <Link href="https://brand.collabuzz.com" target="_blank" rel="noopener noreferrer">Start Your Campaign</Link>
                                 </Button>
                                 <Button asChild variant="outline" size="lg" className="w-full sm:w-auto min-w-[160px]">
                                     <Link href="/services">View Pricing</Link>
@@ -239,38 +316,69 @@ const BrandPage = () => {
                             Flexible pricing that grows with your brand. No hidden fees, cancel anytime.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                        {pricingTiers.map((tier) => (
-                            <div key={tier.name} className={`relative rounded-2xl p-4 md:p-6 border ${tier.highlighted ? 'border-primary bg-primary/5' : 'border-border bg-card/20'}`}>
-                                {tier.highlighted && (
-                                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                        <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
-                                            Most Popular
-                                        </span>
-                                    </div>
-                                )}
-                                <div className="text-center mb-6">
-                                    <h3 className="text-lg md:text-xl font-semibold mb-2">{tier.name}</h3>
-                                    <div className="mb-3">
-                                        <span className="text-2xl md:text-3xl font-bold">{tier.price}</span>
-                                        <span className="text-muted-foreground text-sm">{tier.period}</span>
-                                    </div>
-                                    <p className="text-xs md:text-sm text-muted-foreground">{tier.description}</p>
-                                </div>
-                                <ul className="space-y-2 mb-6">
-                                    {tier.features.map((feature, index) => (
-                                        <li key={index} className="flex items-start gap-3">
-                                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                                            <span className="text-sm">{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Button asChild className={`w-full ${tier.highlighted ? '' : 'variant-outline'}`} variant={tier.highlighted ? 'default' : 'outline'}>
-                                    <Link href="/contact">Get Started</Link>
+                    {/* Loading State */}
+                    {isLoadingPlans && (
+                        <div className="flex justify-center items-center py-12">
+                            <Loader2 className="w-8 h-8 animate-spin text-primary" />
+                            <span className="ml-2 text-muted-foreground">Loading pricing plans...</span>
+                        </div>
+                    )}
+
+                    {/* Error State - Only show if no fallback plans available */}
+                    {plansError && transformedPlans.length === 0 && (
+                        <div className="flex justify-center items-center py-12">
+                            <div className="text-center">
+                                <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+                                <p className="text-muted-foreground mb-4">{plansError}</p>
+                                <Button onClick={() => window.location.reload()} variant="outline">
+                                    Try Again
                                 </Button>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    )}
+
+                    {/* Pricing Plans - Always show if not loading */}
+                    {!isLoadingPlans && transformedPlans.length > 0 && (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                            {transformedPlans.map((tier) => (
+                                <div key={tier.name} className={`relative rounded-2xl p-4 md:p-6 border ${tier.highlighted ? 'border-primary bg-primary/5' : 'border-border bg-card/20'}`}>
+                                    {tier.highlighted && (
+                                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                                            <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                                                Most Popular
+                                            </span>
+                                        </div>
+                                    )}
+                                    <div className="text-center mb-6">
+                                        <h3 className="text-lg md:text-xl font-semibold mb-2">{tier.name}</h3>
+                                        <div className="mb-3">
+                                            <span className="text-2xl md:text-3xl font-bold">{tier.price}</span>
+                                            <span className="text-muted-foreground text-sm">{tier.period}</span>
+                                        </div>
+                                        <p className="text-xs md:text-sm text-muted-foreground">{tier.description}</p>
+                                    </div>
+                                    <ul className="space-y-2 mb-6">
+                                        {tier.features.map((feature, index) => (
+                                            <li key={index} className="flex items-start gap-3">
+                                                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                                <span className="text-sm">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <Button asChild className={`w-full ${tier.highlighted ? '' : 'variant-outline'}`} variant={tier.highlighted ? 'default' : 'outline'}>
+                                        <Link href="/contact">Get Started</Link>
+                                    </Button>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Empty State */}
+                    {!isLoadingPlans && !plansError && transformedPlans.length === 0 && (
+                        <div className="text-center py-12">
+                            <p className="text-muted-foreground">No pricing plans available at the moment.</p>
+                        </div>
+                    )}
                 </Container>
             </Wrapper>
 

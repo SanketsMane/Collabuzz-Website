@@ -1,18 +1,10 @@
-import { Metadata } from "next";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+"use client";
+
+import { MapPin, Phone, Mail, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { useState } from "react";
 
 import { Wrapper, Container } from "@/components";
 import SectionBadge from "@/components/ui/section-badge";
-
-export const metadata: Metadata = {
-  title: "Contact Us - Collabuzz",
-  description: "Get in touch with Collabuzz for any queries about our influencer marketing platform. Contact us for data deletion requests or general inquiries.",
-  openGraph: {
-    title: "Contact Us - Collabuzz",
-    description: "Get in touch with the Collabuzz team for support and inquiries",
-    type: "website",
-  },
-};
 
 const ContactInfo = () => {
   const contactDetails = [
@@ -57,72 +49,171 @@ const ContactInfo = () => {
 };
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("https://api.collabuzz.com/api/public/contact/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus({
+          type: 'success',
+          message: data.message || "Message sent successfully! We'll get back to you soon."
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        throw new Error(data.message || "Failed to send message");
+      }
+    } catch (error) {
+      setStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : "Something went wrong. Please try again."
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="max-w-2xl mx-auto">
-      <form className="space-y-6">
+      {/* Status Messages */}
+      {status.type && (
+        <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
+          status.type === 'success' 
+            ? 'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800' 
+            : 'bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-800'
+        }`}>
+          {status.type === 'success' ? (
+            <CheckCircle className="w-5 h-5 flex-shrink-0" />
+          ) : (
+            <AlertCircle className="w-5 h-5 flex-shrink-0" />
+          )}
+          <p className="text-sm">{status.message}</p>
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
-              Your Name
+              Your Name *
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
+              value={formData.name}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background disabled:opacity-50"
               placeholder="Enter your full name"
               required
+              disabled={isLoading}
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-2">
-              Your Email
+              Your Email *
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background disabled:opacity-50"
               placeholder="Enter your email address"
               required
+              disabled={isLoading}
             />
           </div>
         </div>
         
         <div>
           <label htmlFor="subject" className="block text-sm font-medium mb-2">
-            Subject
+            Subject *
           </label>
           <input
             type="text"
             id="subject"
             name="subject"
-            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background"
+            value={formData.subject}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background disabled:opacity-50"
             placeholder="What's this about?"
             required
+            disabled={isLoading}
           />
         </div>
         
         <div>
           <label htmlFor="message" className="block text-sm font-medium mb-2">
-            Message
+            Message *
           </label>
           <textarea
             id="message"
             name="message"
             rows={6}
-            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background resize-none"
+            value={formData.message}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-background resize-none disabled:opacity-50"
             placeholder="Tell us how we can help you..."
             required
+            disabled={isLoading}
           ></textarea>
         </div>
         
         <button
           type="submit"
-          className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium"
+          disabled={isLoading}
+          className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <Send className="w-4 h-4" />
-          Send Message
+          {isLoading ? (
+            <>
+              <Loader2 className="w-4 h-4 animate-spin" />
+              Sending...
+            </>
+          ) : (
+            <>
+              <Send className="w-4 h-4" />
+              Send Message
+            </>
+          )}
         </button>
       </form>
     </div>

@@ -58,25 +58,25 @@ const InfluencerPage = () => {
         {
             followerRange: "1K - 10K",
             category: "Nano Influencer",
-            avgEarning: "$50-500",
+            avgEarning: "₹4,000-40,000",
             campaignType: "Product reviews, stories"
         },
         {
             followerRange: "10K - 100K", 
             category: "Micro Influencer",
-            avgEarning: "$500-5K",
+            avgEarning: "₹40,000-4,00,000",
             campaignType: "Sponsored posts, videos"
         },
         {
             followerRange: "100K - 1M",
             category: "Macro Influencer", 
-            avgEarning: "$5K-50K",
+            avgEarning: "₹4,00,000-40,00,000",
             campaignType: "Brand partnerships, campaigns"
         },
         {
             followerRange: "1M+",
             category: "Mega Influencer",
-            avgEarning: "$50K+",
+            avgEarning: "₹40,00,000+",
             campaignType: "Major brand ambassadorships"
         }
     ];
@@ -116,8 +116,8 @@ const InfluencerPage = () => {
                     <div className="flex flex-col items-center justify-center py-20 h-full">
                         <div className="flex flex-col items-center mt-6 md:mt-8 w-full max-w-4xl px-4 sm:px-6 md:px-8">
                             <SectionBadge title="For Creators" />
-                            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-semibold text-center mt-6">
-                                <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl">✨</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Turn Your Influence into Income</span>
+                            <h1 className="hero-heading font-semibold text-center optimal-text-wrap mt-6">
+                                <span className="hero-heading">✨</span> <span className="bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">Turn Your Influence into Income</span>
                             </h1>
                             <p className="text-sm sm:text-base md:text-lg text-foreground/80 mt-4 md:mt-6 text-center max-w-2xl">
                                 Connect with brands that value your creativity. Build authentic partnerships, grow your audience, and create a sustainable income stream from your passion.

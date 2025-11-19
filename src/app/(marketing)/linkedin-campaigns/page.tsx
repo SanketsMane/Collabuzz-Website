@@ -134,7 +134,7 @@ export default function LinkedInCampaignsPage() {
                   LinkedIn Marketing
                 </span>
               </h1>
-              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0">
+              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0 leading-relaxed optimal-text-wrap max-w-3xl mx-auto">
                 Connect with India's professional audience through authentic LinkedIn creator partnerships that drive real business results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -161,7 +161,7 @@ export default function LinkedInCampaignsPage() {
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center mb-12">
             <SectionBadge title="Proven Results" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-4 md:mt-6 text-center px-4 md:px-0 optimal-text-wrap"
               📊 Why LinkedIn Marketing Works
             </h2>
             <p className="text-muted-foreground mt-6">

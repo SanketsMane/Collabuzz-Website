@@ -92,7 +92,7 @@ export default function PrivacyInfluencersPage() {
                   First Platform
                 </span>
               </h1>
-              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0">
+              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0 leading-relaxed optimal-text-wrap max-w-3xl mx-auto"
                 Special privacy protections designed specifically for influencers and content creators.
               </p>
               <div className="flex items-center justify-center mt-4 text-primary">

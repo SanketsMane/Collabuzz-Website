@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
                   Policy
                 </span>
               </h1>
-              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0">
+              <p className="text-muted-foreground mt-6 text-center px-4 md:px-0 leading-relaxed optimal-text-wrap max-w-3xl mx-auto"
                 Your privacy is important to us. Learn how we collect, use, and protect your personal information.
               </p>
               <div className="flex items-center justify-center mt-4 text-primary">
