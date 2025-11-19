@@ -35,9 +35,14 @@ const Navbar = () => {
                         </ul>
                     </nav>
                     <div className="flex items-center gap-2 md:gap-4">
-                        <Link href="/demo" className={buttonVariants({ size: "sm", variant: "ghost", className: "hidden md:flex text-xs md:text-sm px-2 md:px-4" })}>
+                        <a 
+                            href="https://calendly.com/collabuzzz/30min" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={buttonVariants({ size: "sm", variant: "ghost", className: "hidden md:flex text-xs md:text-sm px-2 md:px-4" })}
+                        >
                             Schedule Demo
-                        </Link>
+                        </a>
                         <a 
                             href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
                             target="_blank" 
@@ -64,9 +69,15 @@ const Navbar = () => {
                             <Link href="/influencer" className="hover:text-foreground/80 text-sm py-2" onClick={() => setIsMobileMenuOpen(false)}>For Influencers</Link>
                             <Link href="/faq" className="hover:text-foreground/80 text-sm py-2" onClick={() => setIsMobileMenuOpen(false)}>FAQ</Link>
                             <div className="flex flex-col space-y-2 pt-2 border-t border-border">
-                                <Link href="/demo" className={buttonVariants({ size: "sm", variant: "ghost", className: "text-sm justify-start" })} onClick={() => setIsMobileMenuOpen(false)}>
+                                <a 
+                                    href="https://calendly.com/collabuzzz/30min" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className={buttonVariants({ size: "sm", variant: "ghost", className: "text-sm justify-start" })}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
                                     Schedule Demo
-                                </Link>
+                                </a>
                                 <a 
                                     href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
                                     target="_blank" 

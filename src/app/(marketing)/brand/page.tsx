@@ -397,7 +397,7 @@ const BrandPage = () => {
                                 <Link href="/contact">Start Free Trial</Link>
                             </Button>
                             <Button asChild variant="outline" size="lg">
-                                <Link href="/contact">Schedule Demo</Link>
+                                <a href="https://calendly.com/collabuzzz/30min" target="_blank" rel="noopener noreferrer">Schedule Demo</a>
                             </Button>
                         </div>
                         
