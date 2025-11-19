@@ -279,6 +279,33 @@ export default function ContactPage() {
           <PrivacyNotice />
         </Container>
       </div>
+      
+      {/* App Download Section */}
+      <div className="py-16">
+        <Container>
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              Connect On The Go
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              Download our mobile app to stay connected and manage your campaigns anywhere, anytime.
+            </p>
+            <a 
+              href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block transition-transform hover:scale-105"
+            >
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                alt="Get it on Google Play" 
+                style={{ height: '55px', width: 'auto' }} 
+                height="55"
+              />
+            </a>
+          </div>
+        </Container>
+      </div>
     </Wrapper>
   );
 }

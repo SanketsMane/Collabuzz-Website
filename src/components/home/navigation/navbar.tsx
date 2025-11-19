@@ -38,9 +38,14 @@ const Navbar = () => {
                         <Link href="/demo" className={buttonVariants({ size: "sm", variant: "ghost", className: "hidden md:flex text-xs md:text-sm px-2 md:px-4" })}>
                             Schedule Demo
                         </Link>
-                        <Link href="/download" className={buttonVariants({ size: "sm", className: "hidden md:flex text-xs md:text-sm px-2 md:px-4" })}>
+                        <a 
+                            href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={buttonVariants({ size: "sm", className: "hidden md:flex text-xs md:text-sm px-2 md:px-4" })}
+                        >
                             Download App
-                        </Link>
+                        </a>
                         <button
                             className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -62,9 +67,15 @@ const Navbar = () => {
                                 <Link href="/demo" className={buttonVariants({ size: "sm", variant: "ghost", className: "text-sm justify-start" })} onClick={() => setIsMobileMenuOpen(false)}>
                                     Schedule Demo
                                 </Link>
-                                <Link href="/download" className={buttonVariants({ size: "sm", className: "text-sm justify-start" })} onClick={() => setIsMobileMenuOpen(false)}>
+                                <a 
+                                    href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className={buttonVariants({ size: "sm", className: "text-sm justify-start" })}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
                                     Download App
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

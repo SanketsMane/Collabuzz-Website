@@ -485,6 +485,38 @@ const HomePage = () => {
                 </Container>
             </Wrapper>
 
+            {/* App Download Section */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 md:py-16 relative">
+                <Container>
+                    <div className="max-w-3xl mx-auto text-center">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 optimal-text-wrap">
+                            Take Collabuzz Everywhere
+                        </h2>
+                        <p className="text-foreground/80 mb-8 text-sm md:text-base">
+                            Download our mobile app and manage your influencer campaigns on the go. Available now on Google Play Store.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a 
+                                href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block transition-transform hover:scale-105"
+                            >
+                                <img 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                    alt="Get it on Google Play" 
+                                    style={{ height: '60px', width: 'auto' }} 
+                                    height="60"
+                                />
+                            </a>
+                            <div className="text-sm text-muted-foreground">
+                                <p>iOS app coming soon!</p>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
             {/* testimonials */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
                 <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-purple-500 rounded-full blur-[10rem] -z-10"></div>

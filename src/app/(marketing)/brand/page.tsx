@@ -400,6 +400,24 @@ const BrandPage = () => {
                                 <Link href="/contact">Schedule Demo</Link>
                             </Button>
                         </div>
+                        
+                        {/* App Download Option */}
+                        <div className="mt-8 pt-8 border-t border-border">
+                            <p className="text-sm text-muted-foreground mb-4">Or manage campaigns on mobile:</p>
+                            <a 
+                                href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block transition-transform hover:scale-105"
+                            >
+                                <img 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                    alt="Get it on Google Play" 
+                                    style={{ height: '45px', width: 'auto' }} 
+                                    height="45"
+                                />
+                            </a>
+                        </div>
                         <div className="grid grid-cols-3 gap-8 mt-12 max-w-md mx-auto">
                             <div className="text-center">
                                 <div className="text-xl md:text-2xl font-bold text-primary">97%</div>

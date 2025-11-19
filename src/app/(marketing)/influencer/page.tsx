@@ -148,7 +148,7 @@ const InfluencerPage = () => {
                                     />
                                 </a>
                                 <a 
-                                    href="#" 
+                                    href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="inline-block transition-transform hover:scale-105"

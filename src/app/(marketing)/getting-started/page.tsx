@@ -202,6 +202,24 @@ export default function GettingStartedPage() {
                 <Link href="/about">Learn More</Link>
               </Button>
             </div>
+            
+            {/* App Download Section */}
+            <div className="mt-8 pt-8 border-t border-border">
+              <p className="text-sm text-muted-foreground mb-4">Or download our mobile app:</p>
+              <a 
+                href="https://play.google.com/store/apps/details?id=in.collabuzz.influencers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block transition-transform hover:scale-105"
+              >
+                <img 
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                  alt="Get it on Google Play" 
+                  style={{ height: '50px', width: 'auto' }} 
+                  height="50"
+                />
+              </a>
+            </div>
           </div>
         </Container>
       </Wrapper>
