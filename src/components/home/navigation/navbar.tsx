@@ -14,14 +14,14 @@ const Navbar = () => {
             <Container reverse>
                 <div className="flex items-center justify-between h-full mx-auto md:max-w-screen-xl">
                     <div className="flex items-start">
-                        <Link href="/" className="flex items-center gap-3">
+                        <Link href="/" className="flex items-center gap-2 md:gap-3">
                             <img 
                                 src="/images/web_logo_white.png" 
                                 alt="Collabuzz" 
-                                className="hidden md:block h-10 md:h-12 w-auto object-cover object-center"
+                                className="h-8 md:h-10 lg:h-12 w-auto object-cover object-center"
                                 style={{ objectPosition: 'center', imageRendering: 'crisp-edges' }}
                             />
-                            <span className="text-white font-bold italic text-lg md:text-xl">
+                            <span className="text-white font-bold italic text-base md:text-lg lg:text-xl">
                                 Collabuzz
                             </span>
                         </Link>
