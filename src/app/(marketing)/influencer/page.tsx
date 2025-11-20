@@ -5,6 +5,8 @@ import { ArrowRight, Camera, DollarSign, Star, TrendingUp, Users, Shield, Zap, C
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import BrandsMarquee from "@/components/home/brands-marquee";
+import InfluencersMarquee from "@/components/home/influencers-marquee";
 
 export const metadata: Metadata = {
     title: "For Influencers - Collabuzz",
@@ -360,6 +362,12 @@ const InfluencerPage = () => {
                     </div>
                 </Container>
             </Wrapper>
+
+            {/* Brands Marquee Section */}
+            <BrandsMarquee />
+
+            {/* Influencers Marquee Section */}
+            <InfluencersMarquee />
 
             {/* CTA Section */}
             <Wrapper className="flex flex-col items-center justify-center py-12 md:py-20 relative">

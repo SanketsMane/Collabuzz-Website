@@ -7,6 +7,8 @@ import { ArrowRight, Target, TrendingUp, Users, BarChart3, Shield, Zap, CheckCir
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import BrandsMarquee from "@/components/home/brands-marquee";
+import InfluencersMarquee from "@/components/home/influencers-marquee";
 
 // Define types for the API response
 interface SubscriptionPlan {
@@ -381,6 +383,12 @@ const BrandPage = () => {
                     )}
                 </Container>
             </Wrapper>
+
+            {/* Brands Marquee Section */}
+            <BrandsMarquee />
+
+            {/* Influencers Marquee Section */}
+            <InfluencersMarquee />
 
             {/* CTA Section */}
             <Wrapper className="flex flex-col items-center justify-center py-12 md:py-20 relative">
