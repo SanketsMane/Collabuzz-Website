@@ -41,12 +41,14 @@ const FloatingWidgets = () => {
                     branding: true 
                 });
                 
-                // Force Calendly badge to left side
+                // Force Calendly badge to left side with proper spacing
                 setTimeout(() => {
                     const calendlyBadge = document.querySelector('.calendly-badge-widget') as HTMLElement;
                     if (calendlyBadge) {
                         calendlyBadge.style.left = '24px';
                         calendlyBadge.style.right = 'auto';
+                        calendlyBadge.style.bottom = '24px';
+                        calendlyBadge.style.zIndex = '40';
                     }
                 }, 100);
             }

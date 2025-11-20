@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-8 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32">
+        <footer className="flex flex-col relative items-center justify-center border-t border-border pt-16 pb-20 md:pb-24 px-6 lg:px-8 w-full max-w-6xl mx-auto lg:pt-32">
 
             <div className="hidden lg:block absolute -top-1/3 -right-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]"></div>
             <div className="hidden lg:block absolute bottom-0 -left-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]"></div>
