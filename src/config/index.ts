@@ -18,11 +18,31 @@ export const SITE_CONFIG: Metadata = {
     icons: {
         icon: [
             {
-                url: "/icons/favicon.ico",
-                href: "/icons/favicon.ico",
+                url: "/favicon.ico",
+                href: "/favicon.ico",
+            },
+            {
+                url: "/favicon-16x16.png",
+                sizes: "16x16",
+                type: "image/png",
+            },
+            {
+                url: "/favicon-32x32.png",
+                sizes: "32x32",
+                type: "image/png",
+            }
+        ],
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+        other: [
+            {
+                rel: "android-chrome",
+                url: "/android-chrome-192x192.png",
+                sizes: "192x192",
             }
         ]
     },
+    manifest: "/site.webmanifest",
     openGraph: {
         title: "Collabuzz - AI-Powered Influencer Marketing Platform by Sanket Mane",
         description: "Revolutionary AI-powered influencer marketing platform created by Sanket Mane. Features intelligent matchmaking, real-time analytics, and beautiful gradient animations built with Next.js.",
